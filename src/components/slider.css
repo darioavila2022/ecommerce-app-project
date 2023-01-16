@@ -46,7 +46,7 @@
 .swrapper {
     height: 100%;
     display: flex;
-    /* transform: translateX(-200vw); */
+    /* transform: translateX(-100vw); */
 }
 
 .sslide1 {
