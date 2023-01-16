@@ -1,0 +1,28 @@
+.container{
+
+}
+
+.wrapper{
+    padding: 20px;
+}
+
+h1{
+    font-weight: 300;
+    text-align: center;
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topButton{
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bottom{
+
+}
