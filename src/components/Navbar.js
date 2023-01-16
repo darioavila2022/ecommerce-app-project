@@ -1,3 +1,5 @@
+import { Search, ShoppingCartOutlined } from '@mui/icons-material'
+import { Badge } from '@mui/material'
 import React from 'react'
 import './navbar.css'
 
@@ -10,12 +12,29 @@ const Navbar = () => {
                         EN
                     </div>
                     <div className='searchContainer'>
-                        input
-                        icon
+                        <input className='input'>
+
+                        </input>
+                        <div className='searchIcon'>
+                            <Search style={{color:"gray", fontSize:16}} />
+                        </div>
                     </div>
                 </div>
-                <div className='center'>Center</div>
-                <div className='right'>Right</div>
+                <div className='center'>
+                    <div className='logo'>
+                        LOGO
+                    </div>
+                </div>
+                <div className='right'>
+                    <div className='menuItem'> REGISTER</div>
+                    <div className='menuItem'> SIGN IN </div>
+                    <div className='menuItem'>
+                        <Badge badgeContent={4} color="primary">
+                            <ShoppingCartOutlined />
+                        </Badge>
+                    </div>
+
+                </div>
             </div>
         </div>
     )
