@@ -1,4 +1,4 @@
-.container {
+.register-container {
     width: 100vw;
     height: 44.6vw;
     background: linear-gradient(
@@ -11,35 +11,35 @@
     justify-content: center;
 }
 
-.wrapper {
+.register-wrapper {
     width: 40%;
     padding: 20px;
     background-color: white;
 }
 
-h1 {
+.register-title {
     font-size: 24px;
     font-weight: 300;
 }
 
-form {
+.register-form {
     display: flex;
     flex-wrap: wrap;
 }
 
-input {
+.register-input {
     flex: 1;
     min-width: 40%;
     margin: 20px 10px 0px 0px;
     padding: 10px;
 }
 
-.agreement {
+.register-agreement {
     font-size: 12px;
     margin: 20px 0px;
 }
 
-button {
+.register-button {
     width: 40%;
     border: none;
     padding: 15px 20px;

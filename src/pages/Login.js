@@ -2,15 +2,15 @@ import './login.css'
 
 const Login = () => {
     return (
-        <div className="container">
-            <div className="wrapper">
-                <h1>sign in</h1>
-                <form>
-                    <input placeholder="username" />
-                    <input placeholder="password" />
-                    <button>login</button>
-                    <a className="link">forgot your password?</a>
-                    <a className="link">create a new account</a>
+        <div className="login-container">
+            <div className="login-wrapper">
+                <h1 className='login-title'>sign in</h1>
+                <form className='login-form'>
+                    <input className='login-input' placeholder="username" />
+                    <input className='login-input' placeholder="password" />
+                    <button className='login-button'>login</button>
+                    <a className="login-link">forgot your password?</a>
+                    <a className="login-link">create a new account</a>
                 </form>
             </div>
         </div>

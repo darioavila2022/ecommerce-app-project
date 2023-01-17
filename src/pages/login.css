@@ -1,4 +1,4 @@
-.container{
+.login-container{
     width: 100vw;
     height: 44.6vw;
     background: linear-gradient(
@@ -12,30 +12,30 @@
     justify-content: center;
 }
 
-.wrapper{
+.login-wrapper{
     width: 20%;
     padding: 20px;
     background-color: white;
 }
 
-h1{
+.login-title{
     font-size: 24px;
     font-weight: 300;
 }
 
-form{
+.login-form{
     display: flex;
     flex-direction: column;
 }
 
-input{
+.login-input{
     flex: 1;
     min-width: 40%;
     margin: 10px 0px;
     padding: 10px;
 }
 
-button{
+.login-button{
     width: 40%;
     border: none;
     padding: 15px 20px;
@@ -45,7 +45,7 @@ button{
     margin-bottom: 10px;
 }
 
-.link{
+.login-link{
     margin: 10px 0px;
     font-size: 12px;
     text-decoration: underline;

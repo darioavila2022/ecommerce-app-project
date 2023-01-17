@@ -5,35 +5,34 @@ import './navbar.css'
 
 const Navbar = () => {
     return (
-        <div className='container'>
-            <div className='wrapper'>
-                <div className='left'>
-                    <div className='language'>
+        <div className='nav-container'>
+            <div className='nav-wrapper'>
+                <div className='nav-left'>
+                    <div className='nav-language'>
                         EN
                     </div>
-                    <div className='searchContainer'>
-                        <input className='input'>
+                    <div className='nav-searchContainer'>
+                        <input className='nav-input'>
 
                         </input>
-                        <div className='searchIcon'>
+                        <div className='nav-searchIcon'>
                             <Search style={{color:"gray", fontSize:16}} />
                         </div>
                     </div>
                 </div>
-                <div className='center'>
-                    <div className='logo'>
+                <div className='nav-center'>
+                    <div className='nav-logo'>
                         LOGO
                     </div>
                 </div>
-                <div className='right'>
-                    <div className='menuItem'> REGISTER</div>
-                    <div className='menuItem'> SIGN IN </div>
-                    <div className='menuItem'>
+                <div className='nav-right'>
+                    <div className='nav-menuItem'> REGISTER</div>
+                    <div className='nav-menuItem'> SIGN IN </div>
+                    <div className='nav-menuItem'>
                         <Badge badgeContent={4} color="primary">
                             <ShoppingCartOutlined />
                         </Badge>
                     </div>
-
                 </div>
             </div>
         </div>
