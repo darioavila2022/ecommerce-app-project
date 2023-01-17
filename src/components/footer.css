@@ -1,0 +1,50 @@
+.footer-container {
+    display: flex;
+    background-color:cadetblue;
+}
+
+.footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer-desc {
+    margin: 20px 0px;
+}
+
+.social-networks {
+    display: flex;
+}
+
+/* .social-icon {
+
+} */
+
+.footer-center {
+    flex: 1;
+    padding: 20px;
+}
+
+.links {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link-item{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.payment {
+    height: 50px;
+}
