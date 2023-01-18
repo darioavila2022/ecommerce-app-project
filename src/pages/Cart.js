@@ -1,12 +1,12 @@
 import './cart.css'
 import Navbar from "../components/Navbar"
-import Announcement from "../components/Announcement"
+import Ads from "../components/Ads"
 
 const Cart = () => {
     return (
         <div className='cart-container'>
             <Navbar />
-            <Announcement />
+            <Ads />
             <div className='cart-wrapper'>
                 <h1 className='cart-title'>your cart</h1>
                 <div className='cart-titleTop'>

@@ -1,5 +1,5 @@
 import { FavoriteBorderOutlined, SearchOffOutlined, SearchOutlined, ShoppingCart } from '@mui/icons-material'
-import './products.css'
+import './product.css'
 
 const Product = ({item}) => {
     return (

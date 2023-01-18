@@ -1,4 +1,4 @@
-import Announcement from "../components/Announcement.js"
+import Ads from "../components/Ads.js"
 import Navbar from "../components/Navbar.js"
 import Products from "../components/Products.js"
 
@@ -8,7 +8,7 @@ const ProductList = () => {
     return (
         <div classNAme='productlist-container'>
           <Navbar/>
-          <Announcement/>
+          <Ads/>
           <h1>Cassettes</h1>
           <div className='filter-container'>
             <div className='filter'>
