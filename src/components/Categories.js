@@ -1,15 +1,19 @@
 import { categories } from '../data/categories.js'
-import CategoryItem from './CategoryItem'
+import Category from './Category.js'
+
 import './categories.css'
 
 const Categories = () => {
     return (
-        <div className='categories-container'>
-            {categories.map(item=>(
-                <CategoryItem item={item}/>
-            ))}
+        <div>
+            <h1>BROWSE BY GENRE</h1>
+            <div className='categories'>
+                {categories.map(item => (
+                    <Category item={item} />
+                ))}
+            </div>
         </div>
-)};
-
+    )
+};
 
 export default Categories

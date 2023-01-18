@@ -1,34 +1,41 @@
+import cassette1 from '../images/cassette1.jpg'
+import cassette2 from '../images/cassette2.jpg'
+
 export const popularProducts = [
     {
         id: 1,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette1,
     },
     {
         id: 2,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette2,
     },
     {
         id: 3,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette1,
     },
     {
         id: 4,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette2,
     },
     {
         id: 5,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette1,
     },
     {
         id: 6,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette2,
     },
     {
         id: 7,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette1,
     },
     {
         id: 8,
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png/640px-Sony_Duad_%28Japanese_market_Ferri_Chrome%29_cassette_%28transparent%29.png"
+        img: cassette2,
+    },
+    {
+        id: 9,
+        img: cassette1,
     }
 ]

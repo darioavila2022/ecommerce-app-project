@@ -2,7 +2,7 @@ import './slider.css'
 
 import { useState } from 'react'
 import { slides } from '../data/slides.js'
-import { ArrowCircleLeft, ArrowCircleRight } from '@mui/icons-material';
+import { ArrowCircleLeft, ArrowCircleRight, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,12 +28,12 @@ const Slider = () => {
                 <div className='slider-info'>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
                     <div className='slider-description'>{slides[currentIndex].description}</div>
-                    <button className='slider-btn'>SHOP NOW!</button>
+                    <button>SHOP NOW!</button>
                 </div>
             </div>
             <div className='arrows'>
-            <div className='left-arrow' onClick={goToPrevious}><ArrowCircleLeft /></div>
-            <div className='right-arrow' onClick={goToNext}><ArrowCircleRight /></div>
+            <div className='left-arrow' onClick={goToPrevious}><KeyboardDoubleArrowLeft /></div>
+            <div className='right-arrow' onClick={goToNext}><KeyboardDoubleArrowRight /></div>
 
             </div>
         </div>

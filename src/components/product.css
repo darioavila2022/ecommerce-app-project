@@ -1,15 +1,9 @@
-.product-container {
-    flex: 1;
-    margin: 5px;
-    min-width: 280px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-
+.product-image {
+    width: 50vh;
+    height: 30vh;
 }
 
-.product-image{
-    height: 50%;
+.product-icons {
+    margin: 10px;
+    text-align: center;
 }

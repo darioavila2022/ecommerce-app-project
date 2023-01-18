@@ -2,7 +2,8 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: cadetblue;
+    border-top: 2px solid #282c34;
+    border-bottom: 2px solid #282c34;
 }
 
 .slider-wrapper {
@@ -13,6 +14,7 @@
 .slider-img {
     width: 65vh;
     height: 100%;
+    border-right: 2px solid black;
 }
 
 .slider-info {
@@ -27,20 +29,12 @@ margin: auto 80px auto 50px;
     letter-spacing: 5px;
 }
 
-.slider-btn{
-    margin-top: 50px;
-    padding: 10px;
-    font-size: 20px;
-    background-color: transparent;
-    cursor: pointer
-}
-
 .left-arrow {
     position: absolute;
     top: 60%;
     transform: scale(2.5);
     left: 35px;
-    color: white;
+    color: #282c34;
     /* z-index: 1; */
     cursor: pointer;
 }
@@ -50,7 +44,7 @@ margin: auto 80px auto 50px;
     top: 60%;
     transform: scale(2.5);
     right: 35px;
-    color: white;
+    color: #282c34;
     /* z-index: 1; */
     cursor: pointer;
 }

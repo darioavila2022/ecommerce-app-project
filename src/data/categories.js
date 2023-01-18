@@ -1,17 +1,22 @@
+import category1 from '../images/category1.png'
+import category2 from '../images/category2.png'
+import category3 from '../images/category3.png'
+import category4 from '../images/category4.png'
+
 export const categories = [
     {
         id: 1,
-        img: "https://media.istockphoto.com/id/1146312771/es/vector/cassette-de-audio-azul-brillante-relistic-colecci%C3%B3n-retro-mixtape-en-estilo-de-los-a%C3%B1os-80-y.jpg?s=170667a&w=0&k=20&c=YMtc6gBeinL3hPVKujt3EB29Lqs-F1q9Ni_NZHpF9-w=",
-        title: "Category N#1"
+        img: category1,
+        title: "POP"
     },
     {
         id: 2,
-        img: "https://media.istockphoto.com/id/1146312771/es/vector/cassette-de-audio-azul-brillante-relistic-colecci%C3%B3n-retro-mixtape-en-estilo-de-los-a%C3%B1os-80-y.jpg?s=170667a&w=0&k=20&c=YMtc6gBeinL3hPVKujt3EB29Lqs-F1q9Ni_NZHpF9-w=",
-        title: "Category N#2"
+        img: category2,
+        title: "CLASSICAL"
     },
     {
         id: 3,
-        img: "https://media.istockphoto.com/id/1146312771/es/vector/cassette-de-audio-azul-brillante-relistic-colecci%C3%B3n-retro-mixtape-en-estilo-de-los-a%C3%B1os-80-y.jpg?s=170667a&w=0&k=20&c=YMtc6gBeinL3hPVKujt3EB29Lqs-F1q9Ni_NZHpF9-w=",
-        title: "Category N#3"
+        img: category4,
+        title: "ROCK"
     },
 ]

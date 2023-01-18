@@ -1,9 +1,9 @@
-.ads-container{
+.ads-container {
     height: 50px;
-    background-color:cadetblue;
-    color: white;
+    background-color: #282c34;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    letter-spacing: 2px;
 }
