@@ -1,0 +1,12 @@
+.filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.select-options {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+

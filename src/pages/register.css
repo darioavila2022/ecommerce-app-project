@@ -4,7 +4,7 @@
     background: linear-gradient(
             rgba(255, 255, 255, 0.5),
             rgba(255, 255, 255, 0.5)),
-        url("https://www.amberscript.com/wp-content/uploads/2021/06/cassette-header.jpeg") center;
+        url("../images/register-bg.png") center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -15,11 +15,6 @@
     width: 40%;
     padding: 20px;
     background-color: white;
-}
-
-.register-title {
-    font-size: 24px;
-    font-weight: 300;
 }
 
 .register-form {
@@ -37,13 +32,9 @@
 .register-agreement {
     font-size: 12px;
     margin: 20px 0px;
+    word-spacing: 4px;
 }
 
-.register-button {
-    width: 40%;
-    border: none;
-    padding: 15px 20px;
-    background-color: blueviolet;
-    color: white;
-    cursor: pointer
+.register-btn {
+    width: 20%;
 }

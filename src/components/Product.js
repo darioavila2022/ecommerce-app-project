@@ -1,4 +1,4 @@
-import { FavoriteBorderOutlined, SearchOffOutlined, SearchOutlined, ShoppingCart } from '@mui/icons-material'
+import { FavoriteBorderOutlined, SearchOutlined, ShoppingCart } from '@mui/icons-material'
 import './product.css'
 
 const Product = ({ item }) => {

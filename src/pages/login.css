@@ -5,7 +5,7 @@
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.5)
         ), 
-        url("https://cdn.dribbble.com/users/1387049/screenshots/6067463/kmcdigital_taperec_dri_4x.png") center;
+        url("../images/register-bg.png") center;
         background-size: cover;
     display: flex;
     align-items: center;
@@ -16,11 +16,6 @@
     width: 20%;
     padding: 20px;
     background-color: white;
-}
-
-.login-title{
-    font-size: 24px;
-    font-weight: 300;
 }
 
 .login-form{
@@ -35,19 +30,14 @@
     padding: 10px;
 }
 
-.login-button{
+.login-btn{
     width: 40%;
-    border: none;
-    padding: 15px 20px;
-    background-color: blueviolet;
-    color: white;
-    cursor: pointer;
     margin-bottom: 10px;
 }
 
 .login-link{
-    margin: 10px 0px;
-    font-size: 12px;
+    margin: 5px 0px;
+    font-size: 13px;
     text-decoration: underline;
     cursor: pointer;
 }
