@@ -1,4 +1,4 @@
-import './ads.css'
+import './ads.css';
 
 const Ads = () => {
     return (

@@ -1,8 +1,10 @@
-import './slider.css'
+import { Link } from 'react-router-dom';
+
+import './slider.css';
 
 import { useState } from 'react'
 import { slides } from '../data/slides.js'
-import { ArrowCircleLeft, ArrowCircleRight, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
+import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,12 +25,14 @@ const Slider = () => {
         <div className='slider' slides={slides}>
             <div className='slider-wrapper'>
                 <div>
-                    <img className='slider-img' src={slides[currentIndex].img}></img>
+                    <img className='slider-img' src={slides[currentIndex].img} alt='img'></img>
                 </div>
                 <div className='slider-info'>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
                     <div className='slider-description'>{slides[currentIndex].description}</div>
+                    <Link to='/shop/category'>
                     <button>SHOP NOW!</button>
+                    </Link>
                 </div>
             </div>
             <div className='arrows'>
@@ -38,7 +42,7 @@ const Slider = () => {
             </div>
         </div>
     )
-}
+};
 
 export default Slider
 

@@ -1,6 +1,6 @@
-import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter, Radio } from "@mui/icons-material"
-import './footer.css'
-import payment from '../images/payment.png'
+import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter, Radio } from "@mui/icons-material";
+import './footer.css';
+import payment from '../images/payment.png';
 
 const Footer = () => {
     return (
@@ -37,7 +37,7 @@ const Footer = () => {
                 <p><Room /> Adress information. City, Country, Post-code</p>
                 <p><Phone /> Phone number +5 789</p>
                 <p><Mail /> cassetes-store@email.com</p>
-                <img className='payment' src={payment}></img>
+                <img className='payment' src={payment} alt='img'></img>
             </div>
         </div>
     )

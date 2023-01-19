@@ -26,7 +26,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={bluecassette} alt="" />
+                                    <img className='cart-product-img' src={bluecassette} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>
@@ -42,7 +42,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={whitecassette} alt="" />
+                                    <img className='cart-product-img' src={whitecassette} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>
@@ -58,7 +58,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={greycassette} alt="" />
+                                    <img className='cart-product-img' src={greycassette} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>

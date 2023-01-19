@@ -1,10 +1,13 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCart } from '@mui/icons-material'
-import './product.css'
+import { Link } from 'react-router-dom';
+import { FavoriteBorderOutlined, SearchOutlined, ShoppingCart } from '@mui/icons-material';
+import './product.css';
 
 const Product = ({ item }) => {
     return (
         <div className='product-container'>
-            <img className='product-image' src={item.img} />
+            <Link to='/product/id'>
+            <img className='product-image' src={item.img} alt='img' />
+            </Link>
             <div className='product-icons'>
                 <icon> <ShoppingCart /> </icon>
                 <icon> <SearchOutlined /> </icon>

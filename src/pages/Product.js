@@ -2,18 +2,18 @@ import Navbar from '../components/Navbar.js'
 import Ads from '../components/Ads.js'
 import Footer from '../components/Footer.js'
 
-import './singleProduct.css'
+import './Product.css'
 
 import bluecassette from '../images/bluecassette.jpg'
 
-const SingleProduct = () => {
+const Product = () => {
     return(
         <div>
             <Navbar/>
             <Ads />
         <div className='sp-container'>
             <div className='sp-img-wrapper'>
-            <img className='sp-img' src={bluecassette}>
+            <img className='sp-img' src={bluecassette} alt='img'>
             </img>
             </div>
             <div className='sp-info-wrapper'>
@@ -27,4 +27,4 @@ const SingleProduct = () => {
     )
 };
 
-export default SingleProduct;
+export default Product;

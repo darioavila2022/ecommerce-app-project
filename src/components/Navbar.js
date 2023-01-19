@@ -1,7 +1,8 @@
-import { Radio, Search, ShoppingCart } from '@mui/icons-material'
-import { Badge } from '@mui/material'
+import { Link } from 'react-router-dom';
 
-import './navbar.css'
+import { Radio, Search, ShoppingCart } from '@mui/icons-material';
+import { Badge } from '@mui/material';
+import './navbar.css';
 
 const Navbar = () => {
     return (
@@ -21,18 +22,18 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='nav-center'>
-                    <div className='logo'>
+                    <Link to='/' className='logo'>
                         THE CASSETTE STORE <Radio />
-                    </div>
+                    </Link>
                 </div>
                 <div className='nav-right'>
-                    <div className='nav-menu'> REGISTER</div>
-                    <div className='nav-menu'> SIGN IN </div>
-                    <div className='nav-menu'>
+                    <Link to='/register' className='nav-menu'> REGISTER</Link>
+                    <Link to='/login' className='nav-menu'> SIGN IN </Link>
+                    <Link to='/cart' className='nav-menu'>
                         <Badge badgeContent={2} color="secondary">
                             <ShoppingCart />
                         </Badge>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
-import { categories } from '../data/categories.js'
-import Category from './Category.js'
+import Category from './Category.js';
+import { categories } from '../data/categories.js';
 
-import './categories.css'
+import './categories.css';
 
 const Categories = () => {
     return (

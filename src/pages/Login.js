@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar.js';
-import Ads from '../components/Ads.js'
+import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 
 import './login.css'
@@ -7,8 +7,8 @@ import './login.css'
 const Login = () => {
     return (
         <div>
-            <Navbar />
             <Ads />
+            <Navbar />
             <div className="login-container">
                 <div className="login-wrapper">
                     <h1>SIGN IN</h1>
