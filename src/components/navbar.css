@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
-
 .nav-container {
-    height: 60px;
+    height: 70px;
 }
 
 .nav-wrapper {
@@ -18,7 +16,6 @@
 }
 
 .nav-language {
-    font-size: 14;
     cursor: pointer;
 }
 
@@ -37,11 +34,6 @@
 .nav-center {
     flex: 1;
     text-align: center;
-}
-
-.nav-logo {
-    font-weight: bold;
-    font-family: 'Patrick Hand SC', cursive;
 }
 
 .nav-right {

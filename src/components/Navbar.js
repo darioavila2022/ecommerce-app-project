@@ -21,7 +21,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='nav-center'>
-                    <div className='nav-logo'>
+                    <div className='logo'>
                         THE CASSETTE STORE <Radio />
                     </div>
                 </div>

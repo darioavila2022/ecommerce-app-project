@@ -1,9 +1,11 @@
+import { Title } from '@mui/icons-material'
 import cassette1 from '../images/cassette1.jpg'
 import cassette2 from '../images/cassette2.jpg'
 
 export const popularProducts = [
     {
         id: 1,
+        title: Title,
         img: cassette1,
     },
     {

@@ -1,11 +1,14 @@
-import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter } from "@mui/icons-material"
+import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter, Radio } from "@mui/icons-material"
 import './footer.css'
+import payment from '../images/payment.png'
 
 const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-left">
-                <h3>THE CASSETTE STORE</h3>
+            <div className='logo'>
+                        THE CASSETTE STORE <Radio />
+                    </div>
                 <div className="footer-info">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis nisl faucibus semper maximus. Duis vitae euismod tortor. Nunc iaculis egestas nunc quis facilisis. Praesent vel nisl sed arcu imperdiet pretium quis id justo.
                 </div>
@@ -31,10 +34,10 @@ const Footer = () => {
             </div>
             <div className="footer-right">
                 <h3>Contact</h3>
-                <p><Room />Adress information. City, Country, Post-code</p>
-                <p><Phone />Phone number +5 789</p>
-                <p><Mail />cassetes-store@email.com</p>
-                <img className='payment' src='https://www.pngkey.com/png/full/272-2720502_union-hand-roasted-coffee-registered-in-england-and.png'></img>
+                <p><Room /> Adress information. City, Country, Post-code</p>
+                <p><Phone /> Phone number +5 789</p>
+                <p><Mail /> cassetes-store@email.com</p>
+                <img className='payment' src={payment}></img>
             </div>
         </div>
     )
