@@ -19,7 +19,9 @@ const Product = () => {
             <div className='sp-info-wrapper'>
                 <h2>Blue Cassette SNY Brand</h2>
                 <div>Donec sagittis risus quis mauris tincidunt, a eleifend libero auctor. Aliquam nec porttitor lorem. Praesent augue nibh, eleifend congue finibus at, placerat varius sapien. Nulla enim dolor, dictum non neque non, gravida sodales mauris.</div>
+                {/* <div>+</div> */}
                 <h2>$50.00</h2>
+                {/* <div>-</div> */}
             </div> 
         </div>
         <Footer />

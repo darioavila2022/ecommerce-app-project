@@ -1,7 +1,7 @@
 .acct-wrapper {
     width: 100%;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
 }
 
 .profile {
@@ -11,8 +11,13 @@
 .acct-left {
     flex: 1;
     padding-left: 40px;
-    border-top: 2px solid black;
-    border-right: 2px solid black;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    background: linear-gradient(
+        #ffffff49,
+        #ffffff93),
+    url("../images/account-bg.jpg") center;
+    background-size: cover;
 }
 
 .acct-links li {
@@ -20,14 +25,13 @@
 }
 
 .acct-right {
-    flex: 1;
-    border-top: 2px solid black;
+    flex: 1 30vh;
+    border-top: 2px solid #000000;
     padding-left: 40px;
     padding-bottom: 40px;
 }
 
 .acct-input {
-    flex: 1;
     min-width: 40%;
     margin: 20px 10px 0px 0px;
     padding: 10px;

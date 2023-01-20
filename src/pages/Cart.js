@@ -1,11 +1,13 @@
-import './cart.css'
-import Navbar from "../components/Navbar"
-import Ads from "../components/Ads"
-import Footer from '../components/Footer.js'
+import { Link } from 'react-router-dom';
 
-import cassette2 from '../images/cassette2.jpg'
-import cassette4 from '../images/cassette4.png'
-import cassette5 from '../images/cassette5.jpg'
+import './cart.css';
+import Navbar from '../components/Navbar';
+import Ads from '../components/Ads';
+import Footer from '../components/Footer.js';
+
+import cassette2 from '../images/cassette2.jpg';
+import cassette4 from '../images/cassette4.png';
+import cassette5 from '../images/cassette5.jpg';
 
 const Cart = () => {
     return (
@@ -16,10 +18,8 @@ const Cart = () => {
                 <div className='cart-wrapper'>
                     <h1>YOUR CART</h1>
                     <div className='cart-buttons'>
-                        <button>Keep Shopping</button>
-                            <a className='cart-links'>Shopping Bag (7)</a>
-                            <a className='cart-links'>Wish List (0)</a>
-                        <button>Checkout</button>
+                            <Link to='/shop/category' className='link'>KEEP SHOPPING</Link>
+                            <p>SHOPPING BAG (7)</p>
                     </div>
                     <div className='cart-info'>
                         <div className='cart-items'>

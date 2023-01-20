@@ -41,7 +41,9 @@ const Profile = () => {
                                 <input className='acct-input' placeholder="city" />
                                 <input className='acct-input' placeholder="address" />
                                 <input className='acct-input' placeholder="phone" />
-                                <button>UPDATE</button>
+                            </div>
+                            <div>
+                            <button>UPDATE</button>
                             </div>
                         </div>
                     </div>
