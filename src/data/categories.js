@@ -1,22 +1,24 @@
-import category1 from '../images/category1.png'
-import category2 from '../images/category2.png'
-import category3 from '../images/category3.png'
-import category4 from '../images/category4.png'
+import category1 from '../images/category1.jpg'
+import category2 from '../images/category2.jpg'
+import category3 from '../images/category3.jpg'
 
 export const categories = [
     {
         id: 1,
         img: category1,
-        title: "POP"
+        title: "TYPE I",
+        name: "pop"
     },
     {
         id: 2,
         img: category2,
-        title: "CLASSICAL"
+        title: "TYPE II",
+        name: "classical"
     },
     {
         id: 3,
-        img: category4,
-        title: "ROCK"
+        img: category3,
+        title: "TYPE IV",
+        name: "rock"
     },
 ]

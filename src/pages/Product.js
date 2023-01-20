@@ -4,7 +4,7 @@ import Footer from '../components/Footer.js'
 
 import './Product.css'
 
-import bluecassette from '../images/bluecassette.jpg'
+import cassette2 from '../images/cassette2.jpg'
 
 const Product = () => {
     return(
@@ -13,7 +13,7 @@ const Product = () => {
             <Ads />
         <div className='sp-container'>
             <div className='sp-img-wrapper'>
-            <img className='sp-img' src={bluecassette} alt='img'>
+            <img className='sp-img' src={cassette2} alt='img'>
             </img>
             </div>
             <div className='sp-info-wrapper'>

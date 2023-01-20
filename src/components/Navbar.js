@@ -27,9 +27,9 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className='nav-right'>
-                    <Link to='/register' className='nav-menu'> REGISTER</Link>
-                    <Link to='/login' className='nav-menu'> SIGN IN </Link>
-                    <Link to='/cart' className='nav-menu'>
+                    <Link to='/register' className='link'> REGISTER</Link>
+                    <Link to='/login' className='link'> SIGN IN </Link>
+                    <Link to='/cart' className='link'>
                         <Badge badgeContent={2} color="secondary">
                             <ShoppingCart />
                         </Badge>

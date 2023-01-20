@@ -6,7 +6,7 @@ export const slides = [
         {
             id: 1,
             img: slide1,
-            title: "NEW RELEASES",
+            title: "NEW ARRIVALS",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue dolor, auctor quis iaculis eu, accumsan ac ligula. Vivamus varius luctus faucibus."
         },
         {
@@ -18,7 +18,7 @@ export const slides = [
         {
             id: 3,
             img: slide3, 
-            title: "BEST OF ALL TIME",
+            title: "MOST SOLD",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue dolor, auctor quis iaculis eu, accumsan ac ligula. Vivamus varius luctus faucibus."
         },
 ]

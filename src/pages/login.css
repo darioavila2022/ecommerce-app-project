@@ -2,8 +2,8 @@
     width: 100vw;
     height: 44.6vw;
     background: linear-gradient(
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.5)
+        #ffffff80,
+        #ffffff80
         ), 
         url("../images/register-bg.png") center;
         background-size: cover;
@@ -15,7 +15,7 @@
 .login-wrapper{
     width: 20%;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .login-form{

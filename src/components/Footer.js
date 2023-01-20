@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter, Radio } from "@mui/icons-material";
 import './footer.css';
 import payment from '../images/payment.png';
@@ -6,9 +8,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-left">
-            <div className='logo'>
-                        THE CASSETTE STORE <Radio />
-                    </div>
+                <Link to='/' className='logo'> THE CASSETTE STORE <Radio /></Link>
                 <div className="footer-info">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis nisl faucibus semper maximus. Duis vitae euismod tortor. Nunc iaculis egestas nunc quis facilisis. Praesent vel nisl sed arcu imperdiet pretium quis id justo.
                 </div>
@@ -21,15 +21,15 @@ const Footer = () => {
             </div>
             <div className="footer-center">
                 <h3>Useful links</h3>
-                <ul className="links">
-                    <li className="link-item">Home</li>
-                    <li className="link-item">Cart</li>
-                    <li className="link-item">Genre</li>
-                    <li className="link-item">Year</li>
-                    <li className="link-item">My account</li>
-                    <li className="link-item">Order tracking</li>
-                    <li className="link-item">Wish list</li>
-                    <li className="link-item">Terms of use</li>
+                <ul className="footer-links">
+                    <li><Link to='#' className="link">Home</Link></li>
+                    <li><Link to='#' className="link">Account</Link></li>
+                    <li><Link to='#' className="link">Cart</Link></li>
+                    <li><Link to='#' className="link">Shop</Link></li>
+                    <li><Link to='#' className="link">Types</Link></li>
+                    <li><Link to='#' className="link">Popular</Link></li>
+                    <li><Link to='#' className="link">Register</Link></li>
+                    <li><Link to='#' className="link">Terms</Link></li>
                 </ul>
             </div>
             <div className="footer-right">

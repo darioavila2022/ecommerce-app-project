@@ -14,7 +14,7 @@
 .slider-img {
     width: 65vh;
     height: 100%;
-    border-right: 2px solid black;
+    border-right: 2px solid #000000;
 }
 
 .slider-info {

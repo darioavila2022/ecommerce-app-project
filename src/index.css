@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@200&display=swap');
 
 body {
     margin: 0;
@@ -12,6 +13,8 @@ body {
     font-weight: bold;
     font-family: 'Patrick Hand SC', cursive;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 h1 {
@@ -22,7 +25,8 @@ h1 {
 }
 
 h2 {
-    font-family: 'Patrick Hand SC', cursive;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    word-spacing: 5px;
 }
 
 button {
@@ -42,4 +46,15 @@ button:hover {
 icon {
     cursor: pointer;
     transition: 0.2s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }

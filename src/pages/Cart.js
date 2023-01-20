@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar"
 import Ads from "../components/Ads"
 import Footer from '../components/Footer.js'
 
-import bluecassette from '../images/bluecassette.jpg'
-import whitecassette from '../images/whitecassette.jpg'
-import greycassette from '../images/greycassette.jpg'
+import cassette2 from '../images/cassette2.jpg'
+import cassette4 from '../images/cassette4.png'
+import cassette5 from '../images/cassette5.jpg'
 
 const Cart = () => {
     return (
@@ -26,7 +26,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={bluecassette} alt='img' />
+                                    <img className='cart-product-img' src={cassette2} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>
@@ -42,7 +42,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={whitecassette} alt='img' />
+                                    <img className='cart-product-img' src={cassette5} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>
@@ -58,7 +58,7 @@ const Cart = () => {
 
                             <div className='cart-product'>
                                 <div className='product-details'>
-                                    <img className='cart-product-img' src={greycassette} alt='img' />
+                                    <img className='cart-product-img' src={cassette4} alt='img' />
                                     <div className='product-type'>
                                         <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
                                         <span><b>ID: </b>123456789</span>

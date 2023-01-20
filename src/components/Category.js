@@ -3,12 +3,12 @@ import './category.css';
 
 const CategoryItem = ({ item }) => {
     return (
-        <div className='category-items'>
+        <div className='category-wrapper'>
             <img className='category-img' src={item.img} alt='img' />
-            <div>
+            <div className='category-items'>
                 <h2>{item.title}</h2>
-                <Link to='shop/category'>
-                <button>SHOP NOW</button>
+                <Link to={`/shop/${item.name}`}>
+                <button className='category-btn'>SHOP NOW</button>
                 </Link>
             </div>
         </div>

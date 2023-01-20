@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     padding: 20px;
-    background-color: lightslategray;
+    background-color: #778899;
     gap: 20px;
 }
 
@@ -9,23 +9,26 @@
     flex: 1;
 }
 
+.footer-info {
+    margin: 20px 50px 20px 0px;
+    text-align: justify;
+}
+
 .social-networks {
     display: flex;
+    gap: 10px;
 }
 
 .footer-center {
     flex: 1;
 }
 
-.links {
+.footer-links {
     display: flex;
     flex-wrap: wrap;
-    margin: 0px;
-    padding: 0px;
-    list-style: none;   
 }
 
-.link-item{
+.footer-links li {
     width: 50%;
     margin-bottom: 10px;
 }

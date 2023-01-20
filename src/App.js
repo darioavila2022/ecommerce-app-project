@@ -6,12 +6,13 @@ import Product from './pages/Product.js';
 import Cart from './pages/Cart.js'
 import Login from './pages/Login.js'
 import Register from './pages/Register.js'
+import Account from './pages/Account.js'
 
 import './App.css';
 
 const App = ( ) => {
-  const user = true
-
+  // const user = true
+  
   return (
     <div className='App'>
       <BrowserRouter>
@@ -22,6 +23,7 @@ const App = ( ) => {
         <Route path='/cart' element={<Cart />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='account' element={<Account />} />
         {/* <Route path='/login' element={user ? <Navigate to='/'/> : <Login/>} />
         <Route path='register' element={user ? <Navigate to='/'/> : <Register />} /> */}
       </Routes>
