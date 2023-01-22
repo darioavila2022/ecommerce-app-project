@@ -1,4 +1,9 @@
 import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-material';
+import { addProduct } from '../redux/cartRedux.js';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { publicRequest } from '../requestMethods.js';
 
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
@@ -8,6 +13,34 @@ import './Product.css';
 import cassette2 from '../images/cassette2.jpg';
 
 const Product = () => {
+    const location = useLocation()
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({})
+    const [quantity, setQuantity] = useState(1)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        const getProduct = async () => {
+          try {
+            const res = await publicRequest.get("/products/find/" + id);
+            setProduct(res.data);
+          } catch {}
+        };
+        getProduct();
+      }, [id]);
+    
+      const handleQuantity = (type) => {
+        if (type === "dec") {
+          quantity > 1 && setQuantity(quantity - 1);
+        } else {
+          setQuantity(quantity + 1);
+        }
+      };
+
+    const handleClick = () => {
+        dispatch (addProduct({ product, quantity, price :product.price*quantity}))
+    }
+
     return (
         <div>
             <Navbar />
@@ -27,7 +60,7 @@ const Product = () => {
                             <h3>1</h3>
                             <h3><RemoveCircleOutlineRounded /></h3>
                         </div>
-                        <button>ADD TO CART</button>
+                        <button onClick={handleClick}>ADD TO CART</button>
                     </div>
                 </div>
             </div>

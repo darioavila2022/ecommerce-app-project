@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-material';
+import StripeCheckout from 'react-stripe-checkout';
 
 import Navbar from '../components/Navbar';
 import Ads from '../components/Ads';
@@ -9,8 +10,19 @@ import './cart.css';
 import cassette2 from '../images/cassette2.jpg';
 import cassette4 from '../images/cassette4.png';
 import cassette5 from '../images/cassette5.jpg';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+
+
+//WRITING THE STRIPE PUBLIC KEY
+const KEY = process.env.REACT_APP_STRIPE
 
 const Cart = () => {
+    const cart = useSelector((state) => state.cart)
+    const [stripeToken, setStripeToken] = useState(null) //SETTING TOKEN WITH USESTATE WHICH IS GOING TO BE NULL AT THE BEGGINNING
+    const onToken = (token) => {//GETS TOKEN FROM STRIPE
+        setStripeToken(token)
+    }
     return (
         <div>
             <Navbar />
@@ -103,7 +115,18 @@ const Cart = () => {
                                 <span>total</span>
                                 <span>$ 100</span>
                             </div>
+                            <StripeCheckout
+                            name="The Cassette Store"
+                            image="https://cdn-icons-png.flaticon.com/512/1169/1169939.png"
+                            billingAddress
+                            shippingAddress
+                            description={`Your total is $${cart.total}`}
+                            amount={cart.total*100}
+                            token={onToken}
+                            stripeKey={KEY}
+                            >
                             <button className='cart-btn'>CHECKOUT NOW</button>
+                            </StripeCheckout>
                         </div>
                     </div>
                 </div>
