@@ -8,20 +8,27 @@ import Products from '../components/Products.js';
 
 import './shop.css';
 
+// const Shop = () => {
+
+//     const location = useLocation();
+//     const categ = location.pathname.split("/")[2];
+//     const [filters, setFilters] = useState({});
+//     const [sort, setSort] = useState({});
+
 const Shop = () => {
-
     const location = useLocation();
-    const category = location.pathname.split("/")[2];
+    const categ = location.pathname.split("/")[2];
     const [filters, setFilters] = useState({});
-    const [sort, setSort] = useState({});
+    const [sort, setSort] = useState("high");
 
-    const filterItem = (e) => {
-        const value = e.target.value;
-        setFilters({
-            ...filters,
-            [e.target.name]: value,
-        });
-    };
+    // const filterItem = (e) => {
+    //     const value = e.target.value;
+    //     setFilters({
+    //       ...filters,
+    //       [e.target.name]: value,
+    //     });
+    //   };
+    
 
     console.log(filters)
 
@@ -35,14 +42,19 @@ const Shop = () => {
                         <div className='filter'>
                             Filter by Year
                         </div>
-                        {/* <select className='select-options' name='type' onChange={filterItem}>
+                        <select className='select-options' name='type' 
+                        // onChange={filterItem}
+                        >
                             <option disabled>Type</option>
-                            <option>I</option>
-                            <option>II</option>
-                            <option>IV</option>
-                        </select> */}
+                            <option>typei</option>
+                            <option>typeii</option>
+                            <option>typeiv</option>
+                        </select>
 
-                        <select className='select-options' name='year' onChange={filterItem}>
+                        <select className='select-options' name='year' 
+                        // onChange=
+                        // {filterItem}
+                        >
                             <option disabled>Year</option>
                             <option>70s</option>
                             <option>80s</option>
@@ -61,7 +73,7 @@ const Shop = () => {
                         </select>
                     </div>
                 </div>
-                <Products category={category} filters={filters} sort={sort} />
+                <Products category={categ} filters={filters} sort={sort} />
                 <Footer />
             </div>
         </div>
