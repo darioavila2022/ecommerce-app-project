@@ -14,7 +14,7 @@ body {
     font-family: 'Patrick Hand SC', cursive;
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 h1 {
@@ -26,11 +26,12 @@ h1 {
 
 h2 {
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
-    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 30px;
 }
 
 button {
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 10px;
     font-size: 20px;
     background-color: transparent;
@@ -55,6 +56,6 @@ ul {
 
 .link {
     text-decoration: none;
-    color: black;
+    color: #000000;
     cursor: pointer;
 }

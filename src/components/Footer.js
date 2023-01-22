@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
 import { Facebook, Instagram, Mail, Phone, Pinterest, Room, Twitter, Radio } from "@mui/icons-material";
+
 import './footer.css';
 import payment from '../images/payment.png';
 
@@ -22,14 +22,14 @@ const Footer = () => {
             <div className="footer-center">
                 <h3>Useful links</h3>
                 <ul className="footer-links">
-                    <li><Link to='#' className="link">Home</Link></li>
-                    <li><Link to='#' className="link">Account</Link></li>
-                    <li><Link to='#' className="link">Cart</Link></li>
-                    <li><Link to='#' className="link">Shop</Link></li>
-                    <li><Link to='#' className="link">Types</Link></li>
-                    <li><Link to='#' className="link">Popular</Link></li>
-                    <li><Link to='#' className="link">Register</Link></li>
-                    <li><Link to='#' className="link">Terms</Link></li>
+                    <li><Link to='/' className="link">Home</Link></li>
+                    <li><Link to='/account' className="link">Account</Link></li>
+                    <li><Link to='/cart' className="link">Cart</Link></li>
+                    <li><Link to='/shop/category' className="link">Shop</Link></li>
+                    <li><Link to='/shop/category' className="link">Types</Link></li>
+                    <li><Link to='/shop/category' className="link">Popular</Link></li>
+                    <li><Link to='/register' className="link">Register</Link></li>
+                    <li><Link to='/' className="link">Terms</Link></li>
                 </ul>
             </div>
             <div className="footer-right">

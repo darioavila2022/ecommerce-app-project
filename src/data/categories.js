@@ -7,18 +7,18 @@ export const categories = [
         id: 1,
         img: category1,
         title: "TYPE I",
-        name: "pop"
+        name: "typei"
     },
     {
         id: 2,
         img: category2,
         title: "TYPE II",
-        name: "classical"
+        name: "typeii"
     },
     {
         id: 3,
         img: category3,
         title: "TYPE IV",
-        name: "rock"
+        name: "typeiv"
     },
 ]

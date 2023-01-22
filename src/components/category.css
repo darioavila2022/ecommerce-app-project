@@ -1,22 +1,22 @@
-.category-wrapper {
+.categ-wrapper {
     flex: 1;
     text-align: center;
     font-size: 40px;
     border-left: 2px solid #000000;
     position: relative;
     color: #ffffff;
-    text-shadow: 1px 1px 2px #000000, 
-    0 0 1em #000000, 
-    0 0 0.2em #000000;
+    text-shadow: 1px 1px 2px #000000,
+        0 0 1em #000000,
+        0 0 0.2em #000000;
 }
 
-.category-img {
+.categ-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.category-items{
+.categ-element {
     position: absolute;
     top: 30%;
     left: 0;
@@ -25,7 +25,11 @@
     font-size: 40px;
 }
 
-.category-btn {
+.categ-element h2 {
+    font-size: 60px;
+}
+
+.categ-btn {
     margin-top: 0;
     background-color: #ffffff;
     opacity: 95%;

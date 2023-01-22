@@ -1,11 +1,30 @@
-import Navbar from '../components/Navbar.js'
-import Ads from '../components/Ads.js'
-import Footer from '../components/Footer.js'
-import Products from '../components/Products.js'
+import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
-import './shop.css'
+import Navbar from '../components/Navbar.js';
+import Ads from '../components/Ads.js';
+import Footer from '../components/Footer.js';
+import Products from '../components/Products.js';
+
+import './shop.css';
 
 const Shop = () => {
+
+    const location = useLocation();
+    const category = location.pathname.split("/")[2];
+    const [filters, setFilters] = useState({});
+    const [sort, setSort] = useState({});
+
+    const filterItem = (e) => {
+        const value = e.target.value;
+        setFilters({
+            ...filters,
+            [e.target.name]: value,
+        });
+    };
+
+    console.log(filters)
+
     return (
         <div>
             <div>
@@ -14,23 +33,17 @@ const Shop = () => {
                 <div className='filter-wrapper'>
                     <div className='filter-item'>
                         <div className='filter'>
-                            Filter by Genre or Year
+                            Filter by Year
                         </div>
-                        <select className='select-options'>
-                            <option disabled selected>Genre</option>
-                            <option>Rock</option>
-                            <option>Pop</option>
-                            <option>Metal</option>
-                            <option>Electro</option>
-                            <option>Classical</option>
-                            <option>Balads</option>
-                        </select>
+                        {/* <select className='select-options' name='type' onChange={filterItem}>
+                            <option disabled>Type</option>
+                            <option>I</option>
+                            <option>II</option>
+                            <option>IV</option>
+                        </select> */}
 
-                        <select className='select-options'>
-                            <option disabled selected>Year</option>
-                            <option>40s</option>
-                            <option>50s</option>
-                            <option>60s</option>
+                        <select className='select-options' name='year' onChange={filterItem}>
+                            <option disabled>Year</option>
                             <option>70s</option>
                             <option>80s</option>
                             <option>90s</option>
@@ -41,14 +54,14 @@ const Shop = () => {
                         <div className='filter'>
                             Sort by Price
                         </div>
-                        <select className='select-options'>
+                        <select className='select-options' onChange={(e) => setSort(e.target.value)}>
                             <option disabled selected>Price</option>
-                            <option>High price</option>
-                            <option>Low price</option>
+                            <option value='high'>High</option>
+                            <option value='low'>Low</option>
                         </select>
                     </div>
                 </div>
-                <Products />
+                <Products category={category} filters={filters} sort={sort} />
                 <Footer />
             </div>
         </div>

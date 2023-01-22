@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
-
 import './login.css'
 
 const Login = () => {

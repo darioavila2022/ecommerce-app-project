@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react'
 
+import { slides } from '../data/slides.js'
 import './slider.css';
 
-import { useState } from 'react'
-import { slides } from '../data/slides.js'
 import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 const Slider = () => {
@@ -19,7 +19,7 @@ const Slider = () => {
         const isLastSlide = currentIndex === slides.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex)
-    }
+    };
 
     return (
         <div className='slider' slides={slides}>
@@ -27,9 +27,9 @@ const Slider = () => {
                 <div>
                     <img className='slider-img' src={slides[currentIndex].img} alt='img'></img>
                 </div>
-                <div className='slider-info'>
+                <div className='slider-content'>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
-                    <div className='slider-description'>{slides[currentIndex].description}</div>
+                    <div className='slider-descr'>{slides[currentIndex].description}</div>
                     <Link to='/shop/category'>
                     <button>SHOP NOW!</button>
                     </Link>
@@ -38,13 +38,12 @@ const Slider = () => {
             <div className='arrows'>
             <div className='left-arrow' onClick={goToPrevious}><KeyboardDoubleArrowLeft /></div>
             <div className='right-arrow' onClick={goToNext}><KeyboardDoubleArrowRight /></div>
-
             </div>
         </div>
     )
 };
 
-export default Slider
+export default Slider;
 
 
 

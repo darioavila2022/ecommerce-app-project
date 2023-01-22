@@ -4,11 +4,11 @@ import './product.css';
 
 const Product = ({ item }) => {
     return (
-        <div className='product-container'>
+        <div>
             <Link to='/product/id'>
-            <img className='product-image' src={item.img} alt='img' />
+                <img className='prod-img' src={item.img} alt='img' />
             </Link>
-            <div className='product-icons'>
+            <div className='prod-icons'>
                 <icon> <ShoppingCart /> </icon>
                 <icon> <SearchOutlined /> </icon>
                 <icon> <FavoriteBorderOutlined /> </icon>

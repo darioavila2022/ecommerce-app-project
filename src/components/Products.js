@@ -1,13 +1,15 @@
 import { popularProducts } from '../data/products.js';
 import Product from './Product.js';
-
 import './products.css';
 
-const Products = () => {
+const Products = ({ category, filters, sort }) => {
+
+    console.log(category, filters, sort)
+
     return (
         <div>
             <h1>POPULAR PRODUCTS</h1>
-            <div className='products-container'>
+            <div className='products'>
                 {popularProducts.map((item) => (
                     <Product item={item} key={item.id} />
                 ))}
@@ -16,4 +18,4 @@ const Products = () => {
     )
 };
 
-export default Products
+export default Products;

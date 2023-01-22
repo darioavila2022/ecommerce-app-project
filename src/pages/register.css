@@ -1,4 +1,4 @@
-.register-container {
+.reg-container {
     width: 100vw;
     height: 44.6vw;
     background: linear-gradient(
@@ -11,30 +11,30 @@
     justify-content: center;
 }
 
-.register-wrapper {
+.reg-wrapper {
     width: 40%;
     padding: 20px;
     background-color: #ffffff;
 }
 
-.register-form {
+.reg-form {
     display: flex;
     flex-wrap: wrap;
 }
 
-.register-input {
+.reg-input {
     flex: 1;
     min-width: 40%;
     margin: 20px 10px 0px 0px;
     padding: 10px;
 }
 
-.register-agreement {
+.reg-terms {
     font-size: 12px;
     margin: 20px 0px;
     word-spacing: 4px;
 }
 
-.register-btn {
+.reg-btn {
     width: 20%;
 }

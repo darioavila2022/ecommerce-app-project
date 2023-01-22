@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import { Radio, Search, ShoppingCart } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import './navbar.css';
@@ -9,7 +8,7 @@ const Navbar = () => {
         <div className='nav-container'>
             <div className='nav-wrapper'>
                 <div className='nav-left'>
-                    <div className='nav-language'>
+                    <div className='nav-lang'>
                         EN
                     </div>
                     <div className='nav-search'>

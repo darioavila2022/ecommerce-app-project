@@ -17,15 +17,15 @@
     border-right: 2px solid #000000;
 }
 
-.slider-info {
-margin: auto 80px auto 50px;
+.slider-content {
+    margin: auto 80px auto 50px;
 }
 
 .slider-title {
     font-size: 70px;
 }
 
-.slider-description {
+.slider-descr {
     letter-spacing: 5px;
 }
 
@@ -35,7 +35,6 @@ margin: auto 80px auto 50px;
     transform: scale(2.5);
     left: 35px;
     color: #282c34;
-    /* z-index: 1; */
     cursor: pointer;
 }
 
@@ -45,7 +44,5 @@ margin: auto 80px auto 50px;
     transform: scale(2.5);
     right: 35px;
     color: #282c34;
-    /* z-index: 1; */
     cursor: pointer;
 }
-

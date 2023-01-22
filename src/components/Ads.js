@@ -8,4 +8,4 @@ const Ads = () => {
     )
 };
 
-export default Ads
+export default Ads;

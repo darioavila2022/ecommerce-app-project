@@ -1,10 +1,11 @@
 import React from 'react'
-import Categories from '../components/Categories'
-import Navbar from '../components/Navbar'
-import Products from '../components/Products'
-import Slider from '../components/Slider'
-import Footer from '../components/Footer'
-import Ads from '../components/Ads'
+
+import Categories from '../components/Categories.js'
+import Navbar from '../components/Navbar.js'
+import Products from '../components/Products.js'
+import Slider from '../components/Slider.js'
+import Footer from '../components/Footer.js'
+import Ads from '../components/Ads.js'
 
 const Home = () => {
     return (
@@ -19,4 +20,4 @@ const Home = () => {
     )
 };
 
-export default Home
+export default Home;

@@ -3,16 +3,16 @@ import './category.css';
 
 const CategoryItem = ({ item }) => {
     return (
-        <div className='category-wrapper'>
-            <img className='category-img' src={item.img} alt='img' />
-            <div className='category-items'>
+        <div className='categ-wrapper'>
+            <img className='categ-img' src={item.img} alt='img' />
+            <div className='categ-element'>
                 <h2>{item.title}</h2>
                 <Link to={`/shop/${item.name}`}>
-                <button className='category-btn'>SHOP NOW</button>
+                <button className='categ-btn'>SHOP NOW</button>
                 </Link>
             </div>
         </div>
     )
 };
 
-export default CategoryItem
+export default CategoryItem;

@@ -13,10 +13,9 @@
     padding-left: 40px;
     border-top: 2px solid #000000;
     border-right: 2px solid #000000;
-    background: linear-gradient(
-        #ffffff49,
-        #ffffff93),
-    url("../images/account-bg.jpg") center;
+    background: linear-gradient(#ffffff49,
+            #ffffff93),
+        url("../images/account-bg.jpg") center;
     background-size: cover;
 }
 
@@ -36,4 +35,3 @@
     margin: 20px 10px 0px 0px;
     padding: 10px;
 }
-
