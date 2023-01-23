@@ -21,23 +21,23 @@ const Products = ({ categ, filters, sort }) => {
         getProducts();
     }, [categ]);
 
-    //   useEffect(() => {
-    //     cat &&
-    //       setFilteredProducts(
-    //         products.filter((item) =>
-    //           Object.entries(filters).every(([key, value]) =>
-    //             item[key].includes(value)
-    //           )
-    //         )
-    //       );
-    //   }, [products, cat, filters]);
+      useEffect(() => {
+        categ &&
+          setFilteredProducts(
+            products.filter((item) =>
+              Object.entries(filters).every(([key, value]) =>
+                item[key].includes(value)
+              )
+            )
+          );
+      }, [products, categ, filters]);
 
     //   useEffect(() => {
     //     if (sort === "newest") {
     //       setFilteredProducts((prev) =>
     //         [...prev].sort((a, b) => a.createdAt - b.createdAt)
     //       );
-    //     } else if (sort === "asc") {
+    //     } else if (sort === "high") {
     //       setFilteredProducts((prev) =>
     //         [...prev].sort((a, b) => a.price - b.price)
     //       );
@@ -54,9 +54,7 @@ const Products = ({ categ, filters, sort }) => {
             <div className="products">
                 {categ
                     ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
-                    : products
-                        // .slice(0, 9)
-                        .map((item) => <Product item={item} key={item.id} />)}
+                    : products.map((item) => <Product item={item} key={item.id} />)}
             </div>
         </div>
     );

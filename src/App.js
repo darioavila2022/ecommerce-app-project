@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home.js'
-import Shop from './pages/Shop.js'
+import Store from './pages/Store.js';
 import Product from './pages/Product.js';
 import Cart from './pages/Cart.js'
 import Login from './pages/Login.js'
@@ -18,12 +18,12 @@ const App = ( ) => {
       <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path='/shop/:category' element={<Shop />} />
+        <Route path='/store/:category' element={<Store />} />
         <Route path='/product/:id' element={<Product />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='account' element={<Account />} />
+        <Route path='/account' element={<Account />} />
         {/* <Route path='/login' element={user ? <Navigate to='/'/> : <Login/>} />
         <Route path='register' element={user ? <Navigate to='/'/> : <Register />} /> */}
       </Routes>

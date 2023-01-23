@@ -3,7 +3,7 @@ import { addProduct } from '../redux/cartRedux.js';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { publicRequest } from '../requestMethods.js';
+import { publicRequest } from '../requests/requestMethods.js';
 
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
