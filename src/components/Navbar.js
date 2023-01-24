@@ -35,11 +35,11 @@ const Navbar = () => {
                     <Link to='/cart' className='link'>
 
 
-                        <Badge badgeContent={quantity} color="secondary"> 
-
-
+                        <Badge badgeContent={quantity} color="secondary">
                             <ShoppingCart />
                         </Badge>
+
+                        
                     </Link>
                 </div>
             </div>

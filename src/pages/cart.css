@@ -45,6 +45,13 @@
     justify-content: space-evenly;
 }
 
+.prod-name {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .order {
     flex: 1;
     padding: 20px;

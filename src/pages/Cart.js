@@ -7,9 +7,6 @@ import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import './cart.css';
 
-import cassette2 from '../images/cassette2.jpg';
-import cassette4 from '../images/cassette4.png';
-import cassette5 from '../images/cassette5.jpg';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -23,6 +20,8 @@ const Cart = () => {
     const onToken = (token) => {//GETS TOKEN FROM STRIPE
         setStripeToken(token)
     }
+
+    console.log(stripeToken);
     return (
         <div>
             <Navbar />
@@ -37,62 +36,29 @@ const Cart = () => {
                     <div className='cart-sections'>
                         <div className='cart-elements'>
 
-                            <div className='cart-prod'>
+
+
+                            {cart.products.map(product =>(
+
+                             <div className='cart-prod'>
                                 <div className='prod-details'>
-                                    <img className='cart-prod-img' src={cassette2} alt='img' />
-                                    <div className='prod-id'>
-                                        <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
-                                        <span><b>ID: </b>123456789</span>
+                                    <img className='cart-prod-img' src={product.img} alt='img' />
+                                    <div className='prod-name'>
+                                        <span><b>Product: </b>{product.title}</span>
+                                        </div>
+                                        <div className='prod-id'>
+                                        <span><b>ID: </b>{product._id}</span>
                                     </div>
                                 </div>
-
                                 <div className='price'>
-                                    <h2>$500</h2>
+                                    <h2>${product.price}</h2>
                                 </div>
                                 <div className='amount'>
                                     <h3><AddCircleOutlineRounded /></h3>
-                                    <h3>1</h3>
+                                    <h3>{product.quantity}</h3>
                                     <h3><RemoveCircleOutlineRounded /></h3>
                                 </div>
-                            </div>
-
-                            <div className='cart-prod'>
-                                <div className='prod-details'>
-                                    <img className='cart-prod-img' src={cassette4} alt='img' />
-                                    <div className='prod-id'>
-                                        <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
-                                        <span><b>ID: </b>123456789</span>
-                                    </div>
-                                </div>
-
-                                <div className='price'>
-                                    <h2>$500</h2>
-                                </div>
-                                <div className='amount'>
-                                    <h3><AddCircleOutlineRounded /></h3>
-                                    <h3>1</h3>
-                                    <h3><RemoveCircleOutlineRounded /></h3>
-                                </div>
-                            </div>
-
-                            <div className='cart-prod'>
-                                <div className='prod-details'>
-                                    <img className='cart-prod-img' src={cassette5} alt='img' />
-                                    <div className='prod-id'>
-                                        <span><b>Product: </b>FYDELITY Silver Chrome Cassette Tape</span>
-                                        <span><b>ID: </b>123456789</span>
-                                    </div>
-                                </div>
-
-                                <div className='price'>
-                                    <h2>$500</h2>
-                                </div>
-                                <div className='amount'>
-                                    <h3><AddCircleOutlineRounded /></h3>
-                                    <h3>1</h3>
-                                    <h3><RemoveCircleOutlineRounded /></h3>
-                                </div>
-                            </div>
+                            </div>))}
 
 
 
@@ -101,7 +67,7 @@ const Cart = () => {
                             <h2>Order Summary</h2>
                             <div className='order-details'>
                                 <span>subtotal</span>
-                                <span>$ 80</span>
+                                <span>$ {cart.total}</span>
                             </div>
                             <div className='order-details'>
                                 <span>handling + shipping</span>
@@ -113,8 +79,10 @@ const Cart = () => {
                             </div>
                             <div className='order-details'>
                                 <span>total</span>
-                                <span>$ 100</span>
+                                <span>$ {cart.total}</span>
                             </div>
+
+
                             <StripeCheckout
                             name="The Cassette Store"
                             image="https://cdn-icons-png.flaticon.com/512/1169/1169939.png"
@@ -127,6 +95,8 @@ const Cart = () => {
                             >
                             <button className='cart-btn'>CHECKOUT NOW</button>
                             </StripeCheckout>
+
+
                         </div>
                     </div>
                 </div>
