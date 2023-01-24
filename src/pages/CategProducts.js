@@ -1,12 +1,13 @@
-import { useLocation } from "react-router";
-import { useState } from "react";
+import { useLocation } from 'react-router';
+import { useState } from 'react';
 
-import Navbar from "../components/Navbar.js";
-import Ads from "../components/Ads.js";
-import Products from "../components/Products.js";
-import Footer from "../components/Footer.js";
+import Navbar from '../components/Navbar.js';
+import Ads from '../components/Ads.js';
+import Products from '../components/Products.js';
+import Footer from '../components/Footer.js';
+import './categProducts.css'
 
-//Products by category section
+//Products by category
 
 const CategProducts = () => {
   const location = useLocation();
@@ -26,21 +27,24 @@ const CategProducts = () => {
     <div>
       <Navbar />
       <Ads />
-      <div className="filter-wrapper">
+      <h1>OUR PRODUCTS</h1>
+      <div className='filter-wrapper'>
         <div>
-          <div>Filter By Year</div>
-          <select className='select-options' name="size" onChange={filterItems}>
-            <option disabled>Year</option>
-            <option>70s</option>
-            <option>80s</option>
-            <option>90s</option>
+          <div>Filter By Brand</div>
+          <select className='select-options' name='brand' onChange={filterItems}>
+            <option disabled>Brand</option>
+            <option>Sony</option>
+            <option>Maxell</option>
+            <option>TDK</option>
+            <option>Memorex</option>
           </select>
         </div>
         <div>
           <div>Sort By Price</div>
           <select className='select-options' onChange={(e) => setSort(e.target.value)}>
-            <option value="asc">low</option>
-            <option value="desc">high</option>
+          <option disabled>Price</option>
+            <option value='asc'>Low</option>
+            <option value='desc'>High</option>
           </select>
         </div>
       </div>
