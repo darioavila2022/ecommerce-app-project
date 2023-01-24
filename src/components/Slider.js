@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 import { slides } from '../data/slides.js'
 import './slider.css';
-
-import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 const Slider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,7 +29,7 @@ const Slider = () => {
                 <div className='slider-content'>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
                     <div className='slider-descr'>{slides[currentIndex].description}</div>
-                    <Link to='/store/category'>
+                    <Link to='/allproducts'>
                     <button>SHOP NOW!</button>
                     </Link>
                 </div>

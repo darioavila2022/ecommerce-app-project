@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-material';
 import StripeCheckout from 'react-stripe-checkout';
 
-import Navbar from '../components/Navbar';
-import Ads from '../components/Ads';
+import Navbar from '../components/Navbar.js';
+import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import './cart.css';
 
@@ -31,7 +31,7 @@ const Cart = () => {
                 <div className='cart-wrapper'>
                     <h1>YOUR CART</h1>
                     <div className='cart-links'>
-                        <Link to='/shop/category' className='link'>KEEP SHOPPING</Link>
+                        <Link to='/allproducts' className='link'>KEEP SHOPPING</Link>
                         <p>SHOPPING CART (3)</p>
                     </div>
                     <div className='cart-sections'>

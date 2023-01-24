@@ -1,18 +1,15 @@
-import { useLocation } from "react-router";
-import { useState } from "react";
+import { useState } from 'react';
 
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
-import Footer from '../components/Footer.js';
 import Products from '../components/Products.js';
-import './store.css';
+import Footer from '../components/Footer.js';
+import './allProducts.css';
 
+const AllProducts = () => {
 
-const Store = () => {
-  const location = useLocation();
-  const categ = location.pathname.split("/")[2];
   const [filters, setFilters] = useState({});
-  const [sort, setSort] = useState("newest");
+  const [sort, setSort] = useState();
 
   const filterItem = (e) => {
     const value = e.target.value;
@@ -22,15 +19,13 @@ const Store = () => {
     });
   };
 
-  console.log(filters, sort);
-
-return (
+  return (
     <div>
       <Navbar />
       <Ads />
       <div className='filter-wrapper'>
         <div>
-          <div>Filter by Type and Year</div>
+          <div>Filter By Type and Year</div>
           <select className='select-options' name="type" onChange={filterItem}>
             <option disabled>Type</option>
             <option>typei</option>
@@ -45,18 +40,17 @@ return (
           </select>
         </div>
         <div>
-          <div>Sort by price</div>
+          <div>Sort By Price</div>
           <select className='select-options' onChange={(e) => setSort(e.target.value)}>
-            <option value="newest">Newest</option>
-            <option value="high">price high</option>
-            <option value="low">price low</option>
+            <option value="asc">low</option>
+            <option value="desc">high</option>
           </select>
         </div>
       </div>
-      <Products cat={categ} filters={filters} sort={sort} />
+      <Products filters={filters} sort={sort} />
       <Footer />
     </div>
   );
 };
 
-export default Store;
+export default AllProducts;

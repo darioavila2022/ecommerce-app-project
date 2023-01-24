@@ -7,7 +7,7 @@ const CategoryItem = ({ item }) => {
             <img className='categ-img' src={item.img} alt='img' />
             <div className='categ-element'>
                 <h2>{item.title}</h2>
-                <Link to={`/store/${item.categ}`}>
+                <Link to={`/allproducts/${item.categ}`}>
                 <button className='categ-btn'>SHOP NOW</button>
                 </Link>
             </div>

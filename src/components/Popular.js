@@ -6,7 +6,6 @@ import './popular.css'
 
 const Popular = () => {
     const [products, setProducts] = useState([]);
-
     useEffect(() => {
         const getProducts = async () => {
             try {
@@ -22,9 +21,9 @@ const Popular = () => {
             <h1>POPULAR PRODUCTS</h1>
             <div className='pop-wrapper'>
                 <div className='pop-prods'>
-                {products.map((item) =>
+                    {products.map((item) =>
                     <Product item={item} key={item.id} />).slice(0, 9)}
-            </div>
+                </div>
             </div>
         </div>
     );

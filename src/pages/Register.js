@@ -1,6 +1,6 @@
-import Ads from '../components/Ads';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Ads from '../components/Ads.js';
+import Footer from '../components/Footer.js';
+import Navbar from '../components/Navbar.js';
 import './register.css';
 
 const Register = () => {

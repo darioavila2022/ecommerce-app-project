@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Categories from '../components/Categories.js'
+import Ads from '../components/Ads.js'
 import Navbar from '../components/Navbar.js'
 import Slider from '../components/Slider.js'
-import Footer from '../components/Footer.js'
-import Ads from '../components/Ads.js'
+import Categories from '../components/Categories.js'
 import Popular from '../components/Popular.js'
+import Footer from '../components/Footer.js'
 
 const Home = () => {
     return (

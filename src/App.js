@@ -1,24 +1,24 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home.js'
-import Store from './pages/Store.js';
-import Product from './pages/Product.js';
+import AllProducts from './pages/AllProducts.js'
+import CategProducts from './pages/CategProducts.js'
+import Product from './pages/SingleProduct.js';
 import Cart from './pages/Cart.js'
 import Login from './pages/Login.js'
 import Register from './pages/Register.js'
 import Account from './pages/Account.js'
-
 import './App.css';
 
 const App = ( ) => {
   // const user = true
-  
   return (
     <div className='App'>
       <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path='/store/:category' element={<Store />} />
+        <Route path='/allproducts' element={<AllProducts />} />
+        <Route path='/allproducts/:category' element={<CategProducts />} />
         <Route path='/product/:id' element={<Product />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/login' element={<Login />} />

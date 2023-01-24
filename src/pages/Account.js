@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import Ads from '../components/Ads.js';
-import Navbar from '../components/Navbar.js'
+import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import './account.css';
 
@@ -10,9 +10,9 @@ const Profile = () => {
         <div>
             <Ads />
             <Navbar />
-            <div className="acct-wrapper">
+            <div className='acct-wrapper'>
                 <h1>WELCOME</h1>
-                <div className="profile">
+                <div className='profile'>
                     <div className='acct-left'>
                         <div>
                             <h2>NAME LASTNAME</h2>
