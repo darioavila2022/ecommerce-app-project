@@ -15,7 +15,7 @@
     border-right: 2px solid #000000;
     background: linear-gradient(#ffffff49,
             #ffffff93),
-        url("../images/account-bg.jpg") center;
+        url("https://wallpaperaccess.com/full/1584142.jpg") center;
     background-size: cover;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .acct-right {
-    flex: 1 30vh;
+    flex: 3;
     border-top: 2px solid #000000;
     padding-left: 40px;
     padding-bottom: 40px;
@@ -34,4 +34,13 @@
     min-width: 40%;
     margin: 20px 10px 0px 0px;
     padding: 10px;
+}
+
+.acct-elements h2 {
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+.acct-left .acct-elements {
+    text-align: justify;
 }
