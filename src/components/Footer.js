@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-left">
                 <Link to='/' className='logo'> THE CASSETTE STORE <Radio /></Link>
                 <div className="footer-info">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis nisl faucibus semper maximus. Duis vitae euismod tortor. Nunc iaculis egestas nunc quis facilisis. Praesent vel nisl sed arcu imperdiet pretium quis id justo.
+                    The Cassette Store is the home of exclusive and limited edition releases. Stocking all formats and proudly championing the best new products, today we're one of the leading online cassette retailers. Plus, we ship worldwide and offer 50% off your first order when joining our mailing list.
                 </div>
                 <div className="social-networks">
                     <icon><Facebook /></icon>
@@ -23,20 +23,20 @@ const Footer = () => {
                 <h3>Useful links</h3>
                 <ul className="footer-links">
                     <li><Link to='/' className="link">Home</Link></li>
-                    <li><Link to='/account' className="link">Account</Link></li>
+                    <li><Link to='/login' className="link">Account</Link></li>
                     <li><Link to='/cart' className="link">Cart</Link></li>
                     <li><Link to='/allproducts' className="link">Shop</Link></li>
-                    <li><Link to='/allproducts' className="link">Types</Link></li>
-                    <li><Link to='/allproducts' className="link">Popular</Link></li>
+                    <li><Link to='/allproducts/typeiv' className="link">Metallic</Link></li>
                     <li><Link to='/register' className="link">Register</Link></li>
+                    <li><Link to='/allproducts/typei' className="link">Popular</Link></li>
                     <li><Link to='/' className="link">Terms</Link></li>
                 </ul>
             </div>
             <div className="footer-right">
                 <h3>Contact</h3>
-                <p><Room /> Adress information. City, Country, Post-code</p>
-                <p><Phone /> Phone number +5 789</p>
-                <p><Mail /> cassetes-store@email.com</p>
+                <p><Room /> 2300 Fake St, Fake, IN 46407-3050</p>
+                <p><Phone /> + 1 505 734 7399</p>
+                <p><Mail /> thecassetestore@aol.com</p>
                 <img className='payment' src={payment} alt='img'></img>
             </div>
         </div>

@@ -3,7 +3,6 @@
     height: 30vh;
 }
 
-.prod-icons {
-    margin: 10px;
-    text-align: center;
+.prod-title h2 {
+    margin: 5px 10px;
 }
