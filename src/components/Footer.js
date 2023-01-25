@@ -23,13 +23,13 @@ const Footer = () => {
                 <h3>Useful links</h3>
                 <ul className="footer-links">
                     <li><Link to='/' className="link">Home</Link></li>
-                    <li><Link to='/login' className="link">Account</Link></li>
-                    <li><Link to='/cart' className="link">Cart</Link></li>
                     <li><Link to='/allproducts' className="link">Shop</Link></li>
-                    <li><Link to='/allproducts/typeiv' className="link">Metallic</Link></li>
-                    <li><Link to='/register' className="link">Register</Link></li>
-                    <li><Link to='/allproducts/typei' className="link">Popular</Link></li>
-                    <li><Link to='/' className="link">Terms</Link></li>
+                    <li><Link to='/category/typeii' className="link">Chrome</Link></li>
+                    <li><Link to='/account' className="link">Account</Link></li>
+                    <li><Link to='/category/typei' className="link">Ferric</Link></li>
+                    <li><Link to='/cart' className="link">Cart</Link></li>
+                    <li><Link to='/category/typeiv' className="link">Metallic</Link></li>
+                    <li><Link to='/register' className="link">Register</Link></li> 
                 </ul>
             </div>
             <div className="footer-right">

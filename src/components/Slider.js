@@ -29,7 +29,7 @@ const Slider = () => {
                 <div className='slider-content'>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
                     <div className='slider-descr'>{slides[currentIndex].description}</div>
-                    <Link to='/allcategories'>
+                    <Link to='/allproducts'>
                     <button>SHOP NOW!</button>
                     </Link>
                 </div>

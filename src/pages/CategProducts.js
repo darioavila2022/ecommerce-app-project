@@ -7,7 +7,7 @@ import Products from '../components/Products.js';
 import Footer from '../components/Footer.js';
 import './categProducts.css'
 
-//Products by category
+//Products by categories
 
 const CategProducts = () => {
   const location = useLocation();
@@ -42,7 +42,7 @@ const CategProducts = () => {
         <div>
           <div>Sort By Price</div>
           <select className='select-options' onChange={(e) => setSort(e.target.value)}>
-          <option disabled>Price</option>
+            <option disabled>Price</option>
             <option value='asc'>Low</option>
             <option value='desc'>High</option>
           </select>

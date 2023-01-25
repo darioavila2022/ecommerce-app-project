@@ -3,17 +3,16 @@ import { useState } from 'react';
 
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
-import Products from '../components/Products.js';
 import Footer from '../components/Footer.js';
+import Popular from '../components/Popular.js'
 import './allProducts.css'
 
 //All products, all categories
 
 const AllProducts = () => {
-  const location = useLocation();
-  const categ = location.pathname.split("/")[2];
 
-  console.log(location);
+  const location = useLocation();
+  const prods = location.pathname;
 
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState();
@@ -26,8 +25,6 @@ const AllProducts = () => {
     });
   };
 
-  console.log(filters);
-
   return (
     <div>
       <Navbar />
@@ -35,7 +32,6 @@ const AllProducts = () => {
       <h1>OUR PRODUCTS</h1>
       <div className='filter-wrapper'>
         <div>
-          <div>Filter By Brand</div>
           <select className='select-options' name='brand' onChange={filterItems}>
             <option disabled>Brand</option>
             <option>Sony</option>
@@ -53,7 +49,7 @@ const AllProducts = () => {
           </select>
         </div>
       </div>
-      <Products categ={categ} filters={filters} sort={sort} />
+      <Popular prods={prods} filters={filters} sort={sort} />
       <Footer />
     </div>
   );
