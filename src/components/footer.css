@@ -40,3 +40,24 @@
 .payment {
     height: 50px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .footer-info {
+        margin: 15px 0;
+    }
+
+    .footer-links li {
+        width: 30%;
+    }
+
+    .payment {
+        height: 40px;
+    }
+}

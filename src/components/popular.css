@@ -2,9 +2,10 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
 .pop-prods {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
 }

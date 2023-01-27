@@ -11,6 +11,7 @@ const Categories = () => {
                     <Category item={item} />
                 ))}
             </div>
+            <h1>POPULAR PRODUCTS</h1>
         </div>
     )
 };

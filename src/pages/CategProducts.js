@@ -33,9 +33,11 @@ const CategProducts = () => {
           <div>Filter By Brand</div>
           <select className='select-options' name='brand' onChange={filterItems}>
             <option disabled>Brand</option>
+            <option>Philips</option>
             <option>Sony</option>
             <option>Maxell</option>
             <option>TDK</option>
+            <option>Basf</option>
             <option>Memorex</option>
           </select>
         </div>

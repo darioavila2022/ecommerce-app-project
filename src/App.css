@@ -52,3 +52,20 @@ ul {
   color: #000000;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1024px) {
+
+  h1 {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}

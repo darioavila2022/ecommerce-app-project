@@ -5,3 +5,13 @@
     margin-bottom: 50px;
     height: 90vh;
 }
+
+@media only screen and (max-width: 1024px) {
+    .categories {
+        flex-direction: column;
+        margin-bottom: 0;
+        height: 100%;
+        border-top: 1.5px solid #000000;
+        border-bottom: none;
+    }
+}

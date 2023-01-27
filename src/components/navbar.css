@@ -46,3 +46,35 @@
 .nav-right .link {
     margin-left: 20px;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .nav-container {
+        height: 100%;
+        margin-bottom: 15px;
+    }
+
+    .nav-wrapper {
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    .nav-lang {
+        display: none;
+    }
+
+    /* .nav-search {
+        margin: 0px;
+        padding: 0px;
+        justify-content: center;
+    } */
+
+    .nav-search {
+        display: none;
+    }
+
+    .nav-center {
+        margin: 15px;
+    }
+
+}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
-import { KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
+import { ArrowCircleRight, ArrowRight, ArrowRightAltOutlined, ArrowRightRounded, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 import { slides } from '../data/slides.js'
 import './slider.css';
@@ -23,20 +23,21 @@ const Slider = () => {
     return (
         <div className='slider' slides={slides}>
             <div className='slider-wrapper'>
-                <div>
+                <div className='simg-wrapper'>
                     <img className='slider-img' src={slides[currentIndex].img} alt='img'></img>
                 </div>
                 <div className='slider-content'>
+                    <div className='hidden-btn' onClick={goToNext}><ArrowCircleRight /></div>
                     <div className='slider-title'>{slides[currentIndex].title}</div>
                     <div className='slider-descr'>{slides[currentIndex].description}</div>
                     <Link to='/allproducts'>
-                    <button>SHOP NOW!</button>
+                        <button>SHOP NOW!</button>
                     </Link>
                 </div>
             </div>
             <div className='arrows'>
-            <div className='left-arrow' onClick={goToPrevious}><KeyboardDoubleArrowLeft /></div>
-            <div className='right-arrow' onClick={goToNext}><KeyboardDoubleArrowRight /></div>
+                <div className='left-arrow' onClick={goToPrevious}><KeyboardDoubleArrowLeft /></div>
+                <div className='right-arrow' onClick={goToNext}><KeyboardDoubleArrowRight /></div>
             </div>
         </div>
     )

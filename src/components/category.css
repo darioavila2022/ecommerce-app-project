@@ -34,3 +34,28 @@
     background-color: #ffffff;
     opacity: 95%;
 }
+
+@media only screen and (max-width: 1024px) {
+    .categ-wrapper {
+        display: flex;
+        border-left: none;
+    }
+
+    .categ-img {
+        border-bottom: 1.5px solid #000000;
+        height: 30vh;
+    }
+
+    .categ-element{
+        top: 18%;
+    }
+
+    .categ-element h2 {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    .categ-btn {
+        font-size: 10px;
+    }
+}
