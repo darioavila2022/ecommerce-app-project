@@ -29,7 +29,7 @@ const Footer = () => {
                     <li><Link to='/category/typei' className="link">Ferric</Link></li>
                     <li><Link to='/cart' className="link">Cart</Link></li>
                     <li><Link to='/category/typeiv' className="link">Metallic</Link></li>
-                    <li><Link to='/register' className="link">Register</Link></li> 
+                    <li><Link to='/register' className="link">Register</Link></li>
                 </ul>
             </div>
             <div className="footer-right">

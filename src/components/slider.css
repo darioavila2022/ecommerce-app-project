@@ -59,7 +59,7 @@
         font-size: 12px;
     }
 
-     .slider-wrapper {
+    .slider-wrapper {
         flex-direction: column;
         margin-bottom: 15px;
     }
@@ -81,28 +81,25 @@
     .slider-img {
         width: 100%;
         object-fit: cover;
-        object-position: 10% 40%; 
+        object-position: 10% 40%;
         border: none;
         border-top: 1.5px solid #000000;
         border-bottom: 1.5px solid #000000;
     }
 
     .slider-title {
-        font-size: 30px;
         margin-bottom: 10px;
+        font-size: 30px;
     }
 
-    .left-arrow, .right-arrow {
+    .left-arrow,
+    .right-arrow {
         display: none;
     }
 
     .hidden-btn {
+        margin-top: 10px;
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
     }
 }
-
-/* @media only screen and (max-width: 768px) {
-
-} */

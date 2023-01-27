@@ -46,6 +46,8 @@ const Product = () => {
       <Navbar />
       <Ads />
       <div className='product'>
+        <h2 className='hidden-title'>{product.title}</h2>
+        <h2 className='hidden-price'>$ {product.price}</h2>
         <div className='img-wrapper'>
           <img className='product-img' src={product.img} alt='img'>
           </img>
@@ -56,9 +58,9 @@ const Product = () => {
           <div>
             <h2>$ {product.price}</h2>
             <div className='amount'>
-            <h3 onClick={() => addQuantity("dec")}><RemoveCircleOutlineRounded /></h3>
-            <h3>{quantity}</h3>
-            <h3 onClick={() => addQuantity("inc")}><AddCircleOutlineRounded /></h3>
+              <h3 onClick={() => addQuantity("dec")}><RemoveCircleOutlineRounded /></h3>
+              <h3>{quantity}</h3>
+              <h3 onClick={() => addQuantity("inc")}><AddCircleOutlineRounded /></h3>
             </div>
             <button onClick={addToCart}>ADD TO CART</button>
           </div>

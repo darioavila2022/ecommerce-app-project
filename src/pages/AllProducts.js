@@ -32,7 +32,7 @@ const AllProducts = () => {
       <h1>OUR PRODUCTS</h1>
       <div className='filter-wrapper'>
         <div>
-        <div>Filter By Brand</div>
+          <div>Filter By Brand</div>
           <select className='select-options' name='brand' onChange={filterItems}>
             <option disabled>Brand</option>
             <option>Philips</option>

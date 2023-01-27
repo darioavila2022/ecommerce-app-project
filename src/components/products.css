@@ -1,8 +1,6 @@
 .products {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    /* justify-content: space-between; */
     justify-content: space-around;
     margin: 40px;
     gap: 30px;

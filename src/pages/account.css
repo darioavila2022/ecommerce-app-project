@@ -44,3 +44,38 @@
 .acct-left .acct-elements {
     text-align: justify;
 }
+
+@media only screen and (max-width: 1024px) {
+    .acct-wrapper {
+        border-top: 1.5px solid #000000;
+        border-bottom: 1.5px solid #000000;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .acct-left {
+        padding: 10px;
+        border-right: none;
+        border-top: 1.5px solid #000000;
+    }
+
+    .acct-left h2 {
+        letter-spacing: 5px;
+        margin: 10px 0;
+    }
+
+    .acct-left button {
+        display: none;
+    }
+
+    .acct-right {
+        border-top: 1.5px solid #000000;
+    }
+
+    .acct-input {
+        width: 80%;
+    }
+}

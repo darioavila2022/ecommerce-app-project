@@ -16,7 +16,6 @@
 
 @media only screen and (max-width: 768px) {
     .prod-img {
-        width: 100%;
         height: 78%;
     }
 }
@@ -26,6 +25,4 @@
         width: 98%;
         height: 68%;
     }
-
 }
-
