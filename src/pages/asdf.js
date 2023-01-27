@@ -2,23 +2,43 @@ import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { userRequest } from '../requests/requestMethods.js';
 import { useNavigate } from "react-router"
+import { userRequest } from '../requests/requestMethods.js';
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import PaypalCheckoutButton from './PaypalCheckoutButton.js';
+// import StripeCheckout from 'react-stripe-checkout';
+
 
 import './cart.css';
 
+const KEY = process.env.REACT_APP_STRIPE
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart)
+    const [stripeToken, setStripeToken] = useState(null) //SETTING TOKEN WITH USESTATE WHICH IS GOING TO BE NULL AT THE BEGGINNING
+    const navigate = useNavigate()
 
-    const product = {
-        description: "Bunch of cassette tapes",
-        price: 10
+    const onToken = (token) => {// GETS TOKEN FROM STRIPE
+        setStripeToken(token)
     }
+
+// STRIPE CREATES A TOKEN FOR EACH TRANSACTION
+
+    useEffect(() => {// AFTER TAKING THE TOKEN I ADD A USEEFFECT
+        const makeRequest = async () => {// MAKEREQUEST IS AN ASYNC FUNCTION
+            try {
+                const res = await userRequest.post("/checkout/payment", // THE RESPONSE WILL BE INSIDE USERREQUEST FROM "REQUEST METHODS" AND IT WILL BE POSTED IN THE ENDPOINT WHICH IS /CHECKOUT/PAYMENT. 
+                    {
+                        tokenId: stripeToken.id,// SENDING THE TOKENID WHICH IS THE ID FROM THE OBJECT "STRIPETOKEN"
+                        amount: cart.total * 100,// *100 BECAUSE STRIPE WORKS WITH CENTS. 100 CENTS = 1 DOLLAR. AFTER THIS IT GOES TO SUCCESS OR ORDER PAGE
+                    })
+                navigate("/Success", { replace: true }, { data: res.data })// TO DO SO USE THE "HISTORY" HOOK FROM REACT-ROUTER AND THEN GO TO THE SUCCESS PAGE IN SUCCESS.JS. ALSO PARMATERS CAN BE ADDED TO THE HISTORY HOOK
+            } catch { }
+        }// END OF THE MAKEREQUEST FUNCTION
+        stripeToken && makeRequest()// IF STRIPETOKEN EXISTS THE FUNCTION WILL BE CALLED
+    }, [stripeToken, cart.total, navigate])// THE DEPENDENCY OF THE USEEFFECT WILL BE THE STRIPE TOKEN
 
     return (
         <div>
@@ -71,26 +91,33 @@ const Cart = () => {
                                 <span>$ 10</span>
                             </div>
                             <div className='order-details'>
-                                <span>cool discount</span>
-                                <span>$ -10</span>
+                                <span>shipping discount</span>
+                                <span>$ -5</span>
                             </div>
                             <div className='order-details'>
                                 <span>total</span>
-                                <span>$ {cart.total +10 -10}</span>
+                                <span>$ {cart.total}</span>
                             </div>
 
-                            <PaypalCheckoutButton 
-                            product={product}/>
-                            {/* <button className='cart-btn'>CHECKOUT NOW</button> */}
+
+                            <PaypalCheckoutButton
+                                name="The Cassette Store"
+                                image="https://cdn-icons-png.flaticon.com/512/1169/1169939.png"
+                                billingAddress
+                                shippingAddress
+                                description={`Your total is $${cart.total}`}
+                                amount={cart.total * 100}
+                                token={onToken}
+                                stripeKey={KEY}
+                            >
+                                <button className='cart-btn'>CHECKOUT NOW</button>
+                            </PaypalCheckoutButton>
+
 
                         </div>
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
-
             <Footer />
         </div>
     )
