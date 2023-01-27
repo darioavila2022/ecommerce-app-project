@@ -32,19 +32,18 @@ const CategProducts = () => {
         <div>
           <div>Filter By Brand</div>
           <select className='select-options' name='brand' onChange={filterItems}>
-            <option disabled>Brand</option>
+            <option disabled selected>Brand</option>
             <option>Philips</option>
             <option>Sony</option>
-            <option>Maxell</option>
             <option>TDK</option>
             <option>Basf</option>
-            <option>Memorex</option>
+            <option>Maxell</option>
           </select>
         </div>
         <div>
           <div>Sort By Price</div>
           <select className='select-options' onChange={(e) => setSort(e.target.value)}>
-            <option disabled>Price</option>
+            <option disabled selected>Price</option>
             <option value='asc'>Low</option>
             <option value='desc'>High</option>
           </select>
