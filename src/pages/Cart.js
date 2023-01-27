@@ -14,10 +14,11 @@ import './cart.css';
 
 const Cart = () => {
     const cart = useSelector((state) => state.cart)
-
+    
     const product = {
         description: "Bunch of cassette tapes",
-        price: 10
+        // price: 10
+        price: `${cart.total}`
     }
 
     return (
@@ -35,8 +36,8 @@ const Cart = () => {
                         <div className='cart-elements'>
 
 
+        {cart.products.map((product) => (
 
-                            {cart.products.map((product) => (
 
                                 <div className='cart-prod'>
                                     <div className='prod-details'>
