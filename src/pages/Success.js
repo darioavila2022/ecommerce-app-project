@@ -1,4 +1,6 @@
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Mood, ThumbUpOffAlt } from '@mui/icons-material';
 
 import Ads from '../components/Ads';
 import Navbar from '../components/Navbar';
@@ -6,22 +8,23 @@ import Footer from '../components/Footer';
 import './success.css'
 
 const Success = () => {
-
     const location = useLocation()
-
     console.log(location);
+    
     return (
         <div>
             <Ads />
             <Navbar />
             <div className="success-container">
                 <div className="success-wrapper">
-                    <h3>Success!</h3>
-                    <h2>This is your order</h2>
-                    <p>Order number</p>
-                    <p>Products</p>
-                    <p>Price</p>
-                    <p>Delivery</p>
+                    <h2>THANK YOU FOR YOUR PURCHASE!</h2>
+                    <span><Mood /></span>
+                    <span><ThumbUpOffAlt /></span>
+                    <div>
+                        <Link to='/category/typeiv'>
+                            <button>DISCOVER WHAT'S NEW</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -15,7 +15,7 @@ const Login = () => {
 
     const handleClick = (e) => {
         e.preventDefault()
-        login(dispatch, {username, password})
+        login(dispatch, { username, password })
     }
     return (
         <div>
@@ -25,20 +25,20 @@ const Login = () => {
                 <div className="login-wrapper">
                     <h1>SIGN IN</h1>
                     <form className='login-form'>
-                        <input 
-                        className='login-input' 
-                        placeholder="username" 
-                        onChange={(e) => setUserName(e.target.value)} 
+                        <input
+                            className='login-input'
+                            placeholder="username"
+                            onChange={(e) => setUserName(e.target.value)}
                         />
-                        <input 
-                        className='login-input' 
-                        type="password"
-                        placeholder="password" 
-                        onChange={(e) => setPassword(e.target.value)} 
+                        <input
+                            className='login-input'
+                            type="password"
+                            placeholder="password"
+                            onChange={(e) => setPassword(e.target.value)}
                         />
-                        <button 
-                        className='login-btn'
-                        onClick={handleClick}
+                        <button
+                            className='login-btn'
+                            onClick={handleClick}
                         >Login</button>
 
                         {error && <span className='error'>Hm, something went wrong. Check your spelling and try again, please.</span>}
