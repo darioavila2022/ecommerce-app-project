@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { AddReaction, Radio, Search, ShoppingCart } from '@mui/icons-material';
+import { AddReaction, Radio, ShoppingCart } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 
 import { useSelector } from 'react-redux';
@@ -8,7 +8,6 @@ import './navbar.css';
 const Navbar = () => {
     // SHOWING QUANTITY OF TYPE OF PRODUCTS IN CART
     const products = useSelector((state) => state.cart.products);
-    const email = useSelector((state) => state.user.email)
 
     return (
         <div className='nav-container'>
