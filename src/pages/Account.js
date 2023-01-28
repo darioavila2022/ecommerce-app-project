@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
 import './account.css';
 
+//Account or profile, shows user information after registration
+
 const Profile = () => {
     return (
         <div>

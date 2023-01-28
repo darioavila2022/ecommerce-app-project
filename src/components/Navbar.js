@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Radio, Search, ShoppingCart } from '@mui/icons-material';
 import { Badge } from '@mui/material';
+
 import { useSelector } from 'react-redux';
 import './navbar.css';
 
@@ -31,9 +32,9 @@ const Navbar = () => {
                 </div>
                 <div className='nav-right'>
                     <Link to='/register' className='link'> REGISTER</Link>
-                    <Link to='/login' className='link'> SIGN IN </Link>
+                    <Link to='/login' className='link'> LOGIN </Link>
                     <Link to='/cart' className='link'>
-                        <Badge badgeContent={products.length} color="secondary">
+                        <Badge badgeContent={products.length} color="secondary" variant='dot'>
                             <ShoppingCart />
                         </Badge>
                     </Link>

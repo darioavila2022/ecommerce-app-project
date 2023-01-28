@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
-import { ArrowCircleRight, ArrowRight, ArrowRightAltOutlined, ArrowRightRounded, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
+import { ArrowCircleRight, KeyboardDoubleArrowLeft, KeyboardDoubleArrowRight } from '@mui/icons-material';
 
 import { slides } from '../data/slides.js'
 import './slider.css';

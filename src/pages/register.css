@@ -16,15 +16,9 @@
     background-color: #ffffff;
 }
 
-.reg-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .reg-input {
-    flex: 1;
-    min-width: 40%;
-    margin: 20px 10px 0px 0px;
+    margin-top: 20px;
+    min-width: 95%;
     padding: 10px;
 }
 
@@ -32,10 +26,6 @@
     font-size: 12px;
     margin: 20px 0px;
     word-spacing: 4px;
-}
-
-.reg-btn {
-    width: 20%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -46,10 +36,12 @@
 
     .reg-wrapper {
         margin: 30px 10px;
-        width: 80%;
+        width: 90%;
     }
 
-    .reg-btn {
-        width: 100px;
+    .reg-input {
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+
 }

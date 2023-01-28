@@ -3,7 +3,7 @@
     height: 44.6vw;
     background: linear-gradient(#ffffff80,
             #ffffff80),
-        url("../images/register-bg.png") center;
+        url("../images/login-bg.jpg") center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .login-wrapper {
-    width: 20%;
+    width: 30%;
     padding: 20px;
     background-color: #ffffff;
 }

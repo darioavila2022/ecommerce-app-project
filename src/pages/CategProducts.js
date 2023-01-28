@@ -7,7 +7,7 @@ import Products from '../components/Products.js';
 import Footer from '../components/Footer.js';
 import './categProducts.css'
 
-//Products by categories
+//Products categorized. Shows products classified into their own categories.
 
 const CategProducts = () => {
   const location = useLocation();

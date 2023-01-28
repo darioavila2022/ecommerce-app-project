@@ -1,4 +1,3 @@
-import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-material';
 import { addProduct } from '../redux/cartRedux.js';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -10,11 +9,9 @@ import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import './singleProduct.css';
 
-
-//Single product page 
+//Single product page shows one product, its details, its price and it contains a button to add products to cart.
 
 const Product = () => {
-
 
   const location = useLocation()
   const id = location.pathname.split("/")[2];
@@ -32,18 +29,6 @@ const Product = () => {
     getProduct();
   }, [id]);
 
-  // const addQuantity = (type) => {
-  //   if (type === "dec") {
-  //     quantity > 1 && setQuantity(quantity - 1);
-  //   } else {
-  //     setQuantity(quantity + 1);
-  //   }
-  // };
-
-  // const addToCart = () => {
-  //   dispatch(addProduct({ product, quantity, price: product.price * quantity }))
-  // }
-
   return (
     <div>
       <Navbar />
@@ -52,8 +37,6 @@ const Product = () => {
         <h2 className='hidden-title'>{product.title}</h2>
         <h2 className='hidden-price'>$ {product.price}</h2>
         <div className='img-wrapper'>
-          {/* <img className='product-img' src={product.img} alt='img'>
-          </img> */}
           <img className='product-img' src={product.img} alt='img'>
           </img>
         </div>
@@ -62,12 +45,7 @@ const Product = () => {
           <div>{product.desc}</div>
           <div>
             <h2>$ {product.price}</h2>
-            {/* <div className='amount'>
-              <h3 onClick={() => addQuantity("dec")}><RemoveCircleOutlineRounded /></h3>
-              <h3>{quantity}</h3>
-              <h3 onClick={() => addQuantity("inc")}><AddCircleOutlineRounded /></h3>
-            </div>
-            <button onClick={addToCart}>ADD TO CART</button> */}
+
             <button onClick={() => dispatch(addProduct
               ({
                 id: product._id,
@@ -76,8 +54,10 @@ const Product = () => {
                 price: product.price,
                 img: product.img,
                 quantity,
-              })
+              }),
+              // alert('unexpected')
             )}>ADD TO CART</button>
+
           </div>
         </div>
       </div>

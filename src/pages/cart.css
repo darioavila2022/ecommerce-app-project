@@ -57,6 +57,15 @@
     justify-content: space-between;
 }
 
+.bag-del {
+    display: flex;
+    gap: 40px;
+}
+
+.del {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1024px) {
     .cart-wrapper {
         padding: 0;
@@ -111,5 +120,12 @@
         padding-bottom: 0;
         border-top: 1.5px solid #000000;
         border-bottom: 1.5px solid #000000;
+    }
+
+    .bag-del {
+        justify-content: right;
+        border-bottom: 0.5px solid #d3d3d3;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
 }

@@ -7,10 +7,12 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './success.css'
 
+//Success page is shown after a purchase.
+
 const Success = () => {
     const location = useLocation()
     console.log(location);
-    
+
     return (
         <div>
             <Ads />

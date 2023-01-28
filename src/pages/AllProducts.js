@@ -7,7 +7,7 @@ import Footer from '../components/Footer.js';
 import Popular from '../components/Popular.js'
 import './allProducts.css'
 
-//All products, all categories
+//All products and categories. Products can be filtered or sorted by brand and price.
 
 const AllProducts = () => {
 

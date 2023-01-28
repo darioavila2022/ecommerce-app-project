@@ -1,4 +1,5 @@
-import { DeleteForever } from '@mui/icons-material';
+import { DeleteForever, ShoppingBagOutlined } from '@mui/icons-material';
+import { Badge } from '@mui/material';
 import PaypalCheckoutButton from './PaypalCheckoutButton';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -10,16 +11,16 @@ import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import './cart.css';
 
+//Shopping cart sectio shows products selected and summary of the order made by the user.
+
 const Cart = () => {
 
-    const cart = useSelector((state) => state.cart);
     const products = useSelector(state => state.cart.products);
     const dispatch = useDispatch();
 
     const totalPrice = () => {
         let total = 0;
         products.forEach((item) => (total += item.quantity * item.price));
-        // return total.toFixed(2);
         return total;
     };
 
@@ -32,7 +33,7 @@ const Cart = () => {
                     <h1>YOUR CART</h1>
                     <div className='cart-links'>
                         <Link to='/allproducts' className='link'>KEEP SHOPPING</Link>
-                        <p>SHOPPING CART ({cart.quantity})</p>
+                        <p>TO HOME PAGE</p>
                     </div>
                     <div className='cart-sections'>
                         <div className='cart-elements'>
@@ -46,9 +47,19 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className='price'><h2>$ {item.price}</h2></div>
-                                    <div className='amount'><h2>x {item.quantity}</h2></div>
-                                    <div><icon onClick={() => dispatch(removeProduct(item.id))}>
-                                        <DeleteForever /></icon>
+                                    <div className='bag-del'>
+
+                                  
+                                    <p className='bag'>
+                                        <Badge badgeContent={item.quantity} color="secondary">
+                                            <ShoppingBagOutlined />
+                                        </Badge>
+                                    </p>
+                                    <p className='del'>
+                                        <DeleteForever onClick={() =>
+                                            dispatch(removeProduct(item.id))}>
+                                        </DeleteForever>
+                                    </p>
                                     </div>
                                 </div>
                             ))}
