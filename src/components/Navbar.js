@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 import './navbar.css';
 
 const Navbar = () => {
-    // USING THE CART BADGE DYNAMICALLY
-    const quantity = useSelector(state => state.cart.quantity)// SELECTING CART INSIDE THIS STATE RETURNS STATE.CART (IN THIS CASE, THE INITIAL QUANTITY OF THE CART)
+    // SHOWING QUANTITY OF TYPE OF PRODUCTS IN CART
+    const products = useSelector((state) => state.cart.products);
 
     return (
         <div className='nav-container'>
@@ -33,13 +33,9 @@ const Navbar = () => {
                     <Link to='/register' className='link'> REGISTER</Link>
                     <Link to='/login' className='link'> SIGN IN </Link>
                     <Link to='/cart' className='link'>
-
-
-                        <Badge badgeContent={quantity} color="secondary">
+                        <Badge badgeContent={products.length} color="secondary">
                             <ShoppingCart />
                         </Badge>
-
-                        
                     </Link>
                 </div>
             </div>
@@ -47,4 +43,4 @@ const Navbar = () => {
     )
 };
 
-export default Navbar
+export default Navbar;

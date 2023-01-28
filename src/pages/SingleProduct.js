@@ -10,9 +10,12 @@ import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
 import './singleProduct.css';
 
+
 //Single product page 
 
 const Product = () => {
+
+
   const location = useLocation()
   const id = location.pathname.split("/")[2];
   const [product, setProduct] = useState({})
@@ -29,17 +32,17 @@ const Product = () => {
     getProduct();
   }, [id]);
 
-  const addQuantity = (type) => {
-    if (type === "dec") {
-      quantity > 1 && setQuantity(quantity - 1);
-    } else {
-      setQuantity(quantity + 1);
-    }
-  };
+  // const addQuantity = (type) => {
+  //   if (type === "dec") {
+  //     quantity > 1 && setQuantity(quantity - 1);
+  //   } else {
+  //     setQuantity(quantity + 1);
+  //   }
+  // };
 
-  const addToCart = () => {
-    dispatch(addProduct({ product, quantity, price: product.price * quantity }))
-  }
+  // const addToCart = () => {
+  //   dispatch(addProduct({ product, quantity, price: product.price * quantity }))
+  // }
 
   return (
     <div>
@@ -49,7 +52,9 @@ const Product = () => {
         <h2 className='hidden-title'>{product.title}</h2>
         <h2 className='hidden-price'>$ {product.price}</h2>
         <div className='img-wrapper'>
-          <img className='product-img' src={product.img} alt='img'>
+          {/* <img className='product-img' src={product.img} alt='img'>
+          </img> */}
+           <img className='product-img' src={product.img} alt='img'>
           </img>
         </div>
         <div className='product-info'>
@@ -58,11 +63,21 @@ const Product = () => {
           <div>
             <h2>$ {product.price}</h2>
             <div className='amount'>
-              <h3 onClick={() => addQuantity("dec")}><RemoveCircleOutlineRounded /></h3>
+              {/* <h3 onClick={() => addQuantity("dec")}><RemoveCircleOutlineRounded /></h3>
               <h3>{quantity}</h3>
-              <h3 onClick={() => addQuantity("inc")}><AddCircleOutlineRounded /></h3>
+              <h3 onClick={() => addQuantity("inc")}><AddCircleOutlineRounded /></h3> */}
             </div>
-            <button onClick={addToCart}>ADD TO CART</button>
+            {/* <button onClick={addToCart}>ADD TO CART</button> */}
+            <button onClick={()=>dispatch(addProduct
+              ({
+                id: product._id,
+                title: product.title,
+                desc: product.desc,
+                price: product.price,
+                img: product.img,
+                quantity,
+              })
+              )}>ADD TO CART</button>
           </div>
         </div>
       </div>

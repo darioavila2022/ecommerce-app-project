@@ -1,8 +1,10 @@
-import { AddCircleOutlineRounded, RemoveCircleOutlineRounded } from '@mui/icons-material';
+import { DeleteForever } from '@mui/icons-material';
 import PaypalCheckoutButton from './PaypalCheckoutButton';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
+import { removeProduct } from '../redux/cartRedux.js';
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
@@ -10,10 +12,20 @@ import './cart.css';
 
 const Cart = () => {
 
-    const cart = useSelector((state) => state.cart)
+    const cart = useSelector((state) => state.cart);
+    const products = useSelector(state => state.cart.products);
+    const dispatch = useDispatch();
+
     const product = {
         description: "Bunch of cassette tapes",
         price: `${cart.total}`
+    };
+
+    const totalPrice = () => {
+        let total = 0;
+        products.forEach((item) => (total += item.quantity * item.price));
+        // return total.toFixed(2);
+        return total;
     };
 
     return (
@@ -29,24 +41,19 @@ const Cart = () => {
                     </div>
                     <div className='cart-sections'>
                         <div className='cart-elements'>
-
-                            {cart.products.map((product) => (
+                            {products?.map((item) => (
                                 <div className='cart-prod'>
                                     <div className='prod-details'>
-                                        <img className='cart-prod-img' alt='img' src={product.img} />
+                                        <img className='cart-prod-img' alt='img' src={item.img} />
                                         <div className='prod-name-id'>
-                                            <span><b>Product: </b>{product.title}</span>
-                                            <span><b>ID: </b>{product._id}</span>
+                                            <span><b>Product: </b>{item.title}</span>
+                                            <span><b>ID: </b>{item.id}</span>
                                         </div>
                                     </div>
-                                    <div className='price'>
-                                        <h2>${product.price}</h2>
-                                    </div>
-                                    <div className='amount'>
-                                        <h3><AddCircleOutlineRounded /></h3>
-                                        {/* <h3>{product.quantity}</h3> */}
-                                        <h3>1</h3>
-                                        <h3><RemoveCircleOutlineRounded /></h3>
+                                    <div className='price'><h2>$ {item.price}</h2></div>
+                                    <div className='amount'><h2>x {item.quantity}</h2></div>
+                                    <div><icon onClick={() => dispatch(removeProduct(item.id))}>
+                                        <DeleteForever /></icon>
                                     </div>
                                 </div>
                             ))}
@@ -55,20 +62,20 @@ const Cart = () => {
                         <div className='order'>
                             <h2>Order Summary</h2>
                             <div className='order-details'>
-                                <span>subtotal</span>
-                                <span>$ {cart.total}</span>
+                                <span>Subtotal</span>
+                                <span>$ {totalPrice()}</span>
                             </div>
                             <div className='order-details'>
-                                <span>handling + shipping</span>
-                                <span>$ 10</span>
+                                <span>Handling + shipping</span>
+                                <span>$ 50</span>
                             </div>
                             <div className='order-details'>
-                                <span>cool discount</span>
-                                <span>$ -10</span>
+                                <span>Special discount</span>
+                                <span>$ -50</span>
                             </div>
                             <div className='order-details'>
-                                <span>total</span>
-                                <span>$ {cart.total + 10 - 10}</span>
+                                <span>Total</span>
+                                <span>$ {totalPrice()}</span>
                             </div>
                             <PaypalCheckoutButton product={product} />
                         </div>
