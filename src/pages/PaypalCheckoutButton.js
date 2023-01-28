@@ -1,6 +1,5 @@
 import { PayPalButtons } from "@paypal/react-paypal-js"
 import { useState } from "react"
-
 import { useNavigate } from "react-router-dom"
 
 const PaypalCheckoutButton = (props) => {
@@ -8,7 +7,6 @@ const PaypalCheckoutButton = (props) => {
     const [paidFor, setPaidFor] = useState(false)
     const [error, setError] = useState(null)
     const navigate = useNavigate()
-
 
     const handleApprove = (orderID) => {
         // CALL BACKEND FUNCTION TO FULFILL ORDER
@@ -21,15 +19,15 @@ const PaypalCheckoutButton = (props) => {
         //setError("Your payment was processed successfully. However, we are unable to concrete your purchase. Please contact us at test@test.com")
     }
 
-    if (paidFor){
+    if (paidFor) {
         //DISPLAY SUCCESS MESSAGE, MODAL OR REDIRECT USER TO SUCCESS PAGE
         navigate("/Success", { replace: true })
         // alert("Thank you for your puchase!")
     }
 
     if (error)
-    //DISPLAY ERROR MESSAGE, MODAL OR REDIRECT USER TO ERROR PAGE
-    alert(error)
+        //DISPLAY ERROR MESSAGE, MODAL OR REDIRECT USER TO ERROR PAGE
+        alert(error)
 
     return (
         <PayPalButtons
@@ -61,4 +59,4 @@ const PaypalCheckoutButton = (props) => {
         />
     )
 }
-export default PaypalCheckoutButton
+export default PaypalCheckoutButton;
