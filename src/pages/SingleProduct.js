@@ -20,6 +20,8 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1)
   const dispatch = useDispatch()
 
+  console.log(setQuantity);
+
   useEffect(() => {
     const getProduct = async () => {
       try {
