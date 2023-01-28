@@ -1,3 +1,6 @@
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 import Ads from '../components/Ads.js';
 import Navbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
@@ -6,20 +9,25 @@ import './account.css';
 //Account or profile, shows user information after registration
 
 const Profile = () => {
+
+    const user = useSelector((state) => state.user.currentUser)
+
     return (
         <div>
             <Ads />
             <Navbar />
             <div className='acct-wrapper'>
-                <h1>WELCOME</h1>
+                <h1>WELCOME {user.email}</h1>
                 <div className='profile'>
                     <div className='acct-left'>
                         <div>
-                            <h2>NAME LASTNAME</h2>
-                            <h2>email@email.com</h2>
+                            <h2>WE ARE GLAD TO SEE YOU AGAIN!</h2>
+                            <h2>{user.email}</h2>
                         </div>
                         <div className='acct-elements'>
-                            <div><button>LOG OUT</button></div>
+                            <Link to='/allproducts'>
+                                <div><button>SEE WHAT'S NEW!</button></div>
+                            </Link>
                         </div>
                     </div>
 
@@ -59,15 +67,6 @@ const Profile = () => {
                             </div>
                             <div><button>UPDATE</button></div>
                         </div>
-
-                        <div className='acct-elements'>
-                            <div>
-                                <h2>Payment</h2>
-                                <input className='acct-input' placeholder="credit card number" />
-                                <input className='acct-input' placeholder="expiration date" />
-                            </div>
-                            <div><button>UPDATE</button></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -77,3 +76,5 @@ const Profile = () => {
 };
 
 export default Profile;
+
+

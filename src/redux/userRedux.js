@@ -1,26 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({// CREATING SLICE WITH REDUX
-    name:"user",// FIRST OBJECT
-    initialState:{// INITIAL STATE OF OBJECT
+    name: "user",// FIRST OBJECT
+    initialState: {// INITIAL STATE OF OBJECT
         currentUser: null,
         isFetching: false,
         error: false,
     },
     reducers: {
-        loginStart:(state) => {
-            state.isFetching=true
+        loginStart: (state) => {
+            state.isFetching = true
         },
-        loginSuccess:(state, action) => {
+        loginSuccess: (state, action) => {
             // state.isFetching=false,
-            state.currentUser=action.payload
+            state.currentUser = action.payload
         },
-        loginFailure:(state) => {
-            state.isFetching=false
-            state.error=true
+        loginFailure: (state) => {
+            state.isFetching = false
+            state.error = true
         },
     },
 })
 
+
 export const { loginStart, loginSuccess, loginFailure } = userSlice.actions
 export default userSlice.reducer //DEFAULT BECAUSE IT WILL BE USED IN THE STORE APP
+

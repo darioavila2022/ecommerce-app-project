@@ -4,6 +4,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
 import cartReducer from "./cartRedux"
 import userReducer from "./userRedux"
+
 import {
     persistStore,
     persistReducer,
@@ -23,20 +24,21 @@ const persistConfig = {
     storage,
 }
 
-const rootReducer = combineReducers({user:userReducer, cart: cartReducer})
+const rootReducer = combineReducers({ user: userReducer, cart: cartReducer })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 
 //CREATING STORE:
 export const store = configureStore({// OPENING NEW OBJECTS
-    reducer: persistedReducer, 
+    reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        },
-    }),
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }),
 })
+
 
 export let persistor = persistStore(store)

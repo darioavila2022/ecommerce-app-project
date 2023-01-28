@@ -11,17 +11,15 @@ const PaypalCheckoutButton = (props) => {
     // CALL BACKEND FUNCTION TO FULFILL ORDER
     const handleApprove = (orderID) => {
         setPaidFor(true)
-        setError("Unable to concrete your purchase")
     }
 
     if (paidFor) {
         navigate("/Success", { replace: true })
-        alert("Thank you for your puchase!")
     }
 
     if (error)
         alert(error)
-        
+
     return (
         <PayPalButtons
             createOrder={(data, actions) => {

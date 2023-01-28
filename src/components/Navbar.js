@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Radio, Search, ShoppingCart } from '@mui/icons-material';
+import { AddReaction, Radio, Search, ShoppingCart } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 
 import { useSelector } from 'react-redux';
@@ -8,6 +8,7 @@ import './navbar.css';
 const Navbar = () => {
     // SHOWING QUANTITY OF TYPE OF PRODUCTS IN CART
     const products = useSelector((state) => state.cart.products);
+    const email = useSelector((state) => state.user.email)
 
     return (
         <div className='nav-container'>
@@ -17,11 +18,10 @@ const Navbar = () => {
                         EN
                     </div>
                     <div className='nav-search'>
-                        <input className='nav-input'>
-
+                        <input className='nav-input' disabled placeholder='WE HAVE DISCOUNTS!'>
                         </input>
                         <div className='nav-searchIcon'>
-                            <Search style={{ color: "grey" }} />
+                            <AddReaction style={{ color: "grey" }} />
                         </div>
                     </div>
                 </div>

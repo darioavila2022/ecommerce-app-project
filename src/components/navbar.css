@@ -15,10 +15,6 @@
     align-items: center;
 }
 
-.nav-lang {
-    cursor: pointer;
-}
-
 .nav-search {
     border: 0.5px solid #d3d3d3;
     display: flex;

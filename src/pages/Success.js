@@ -24,7 +24,7 @@ const Success = () => {
                     <span><ThumbUpOffAlt /></span>
                     <div>
                         <Link to='/category/typeiv'>
-                            <button>DISCOVER WHAT'S NEW</button>
+                            <button>KEEP BUYING TAPES!</button>
                         </Link>
                     </div>
                 </div>

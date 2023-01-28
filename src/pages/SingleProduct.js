@@ -1,9 +1,10 @@
-import { addProduct } from '../redux/cartRedux.js';
+import { Tooltip } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { publicRequest } from '../requests/requestMethods.js';
 
+import { addProduct } from '../redux/cartRedux.js';
 import Navbar from '../components/Navbar.js';
 import Ads from '../components/Ads.js';
 import Footer from '../components/Footer.js';
@@ -46,18 +47,18 @@ const Product = () => {
           <div>
             <h2>$ {product.price}</h2>
 
-            <button onClick={() => dispatch(addProduct
-              ({
-                id: product._id,
-                title: product.title,
-                desc: product.desc,
-                price: product.price,
-                img: product.img,
-                quantity,
-              }),
-              // alert('unexpected')
-            )}>ADD TO CART</button>
-
+            <Tooltip title="+1" placement="bottom-end">
+              <button onClick={() => dispatch(addProduct
+                ({
+                  id: product._id,
+                  title: product.title,
+                  desc: product.desc,
+                  price: product.price,
+                  img: product.img,
+                  quantity,
+                }),
+              )}>ADD TO CART</button>
+            </Tooltip>
           </div>
         </div>
       </div>
@@ -67,4 +68,3 @@ const Product = () => {
 };
 
 export default Product;
-
