@@ -16,11 +16,6 @@ const Cart = () => {
     const products = useSelector(state => state.cart.products);
     const dispatch = useDispatch();
 
-    const product = {
-        description: "Bunch of cassette tapes",
-        price: `${cart.total}`
-    };
-
     const totalPrice = () => {
         let total = 0;
         products.forEach((item) => (total += item.quantity * item.price));
@@ -77,7 +72,7 @@ const Cart = () => {
                                 <span>Total</span>
                                 <span>$ {totalPrice()}</span>
                             </div>
-                            <PaypalCheckoutButton product={product} />
+                            <PaypalCheckoutButton product={totalPrice()} />
                         </div>
                     </div>
                 </div>
