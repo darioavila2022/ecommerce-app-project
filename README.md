@@ -23,15 +23,17 @@ Proyecto creado con fines de aprendizaje: Este proyecto cuenta con dos component
 
 Instalación de componentes:
 
-bash
+```bash
   npm install 
+```
 
 Inicialización en servidor local:
 
-bash
+```bash
   npm start
+```
 
-## 4. Funciones utilizadas (Frontend)
+## 4. Recursos utilizadas (Frontend)
 
 - Plataforma React.JS (componentes y props)
 - Paquete React-Router-Dom (BrowserRouter, Route, Routes, Navigate)
@@ -49,7 +51,7 @@ bash
 
 ## 5. Prototipado
 
-![Prototipado](./src/images/simple-prototype.jpg)
+![Prototipado](./src/images/prototipado/)
 
 ## 6. Autores
 
