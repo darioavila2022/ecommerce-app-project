@@ -4,20 +4,20 @@ Proyecto creado con fines de aprendizaje: Este proyecto cuenta con dos component
 
 ## *Índice*
 
-* [1. EnlaceFront](#1-enlace)
-* [2. EnlaceBack](#1-enlace)
-* [3. Instalación](#2-instalación)
-* [4. Funciones utilizadas](#3-funciones-utilizadas)
-* [5. Prototipado](#4-prototipado)
-* [6. Autores](#5-autores)
+* [1. Enlace front](#1-enlacefront)
+* [2. Enlace back](#2-enlaceback)
+* [3. Instalación](#3-instalación)
+* [4. Recursos utilizados](#4-recursos-utilizados)
+* [5. Prototipado](#5-prototipado)
+* [6. Autores](#6-autores)
 
 ## 1. Enlace front-end
 
-[EnlaceFront](https://famous-vacherin-56ae21.netlify.app/)
+[Enlace front](https://fastidious-sorbet-509ab1.netlify.app/)
 
 ## 2. Enlace back-end
 
-[EnlaceBack](https://famous-vacherin-56ae21.netlify.app/)
+[Enlace back](https://github.com/darioavila2022/ecommerce-app-project-backend)
 
 ## 3. Instalación 
 
@@ -33,7 +33,7 @@ Inicialización en servidor local:
   npm start
 ```
 
-## 4. Recursos utilizadas (Frontend)
+## 4. Recursos utilizados (Frontend)
 
 - Plataforma React.JS (componentes y props)
 - Paquete React-Router-Dom (BrowserRouter, Route, Routes, Navigate)
@@ -51,7 +51,7 @@ Inicialización en servidor local:
 
 ## 5. Prototipado
 
-![Prototipado](./src/images/prototipado/)
+[Prototipado](./src/images/prototipado/)
 
 ## 6. Autores
 
