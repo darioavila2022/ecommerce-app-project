@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# eCommerce MERN Fullstack Project (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto creado con fines de aprendizaje: Este proyecto cuenta con dos componentes principales: la sección de backend/api y la sección frontend/client. Estos componentes fueron trabajados por separado y cada despliegue se llevó a cabo desde sus repositorios respectivos. Los enlaces se encuentran adjuntos a este documento de texto. Esta aplicación fullstack integra MONGO, EXPRESS, REACT Y NODEJS, a través de una tienda online. Se utiliza PayPal Sandbox para simular los pagos, se incluye autenticación, entre otros.
 
-## Available Scripts
+## *Índice*
 
-In the project directory, you can run:
+* [1. EnlaceFront](#1-enlace)
+* [2. EnlaceBack](#1-enlace)
+* [3. Instalación](#2-instalación)
+* [4. Funciones utilizadas](#3-funciones-utilizadas)
+* [5. Prototipado](#4-prototipado)
+* [6. Autores](#5-autores)
 
-### `npm start`
+## 1. Enlace front-end
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[EnlaceFront](https://famous-vacherin-56ae21.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. Enlace back-end
 
-### `npm test`
+[EnlaceBack](https://famous-vacherin-56ae21.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Instalación 
 
-### `npm run build`
+Instalación de componentes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+  npm install 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Inicialización en servidor local:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+  npm start
 
-### `npm run eject`
+## 4. Funciones utilizadas (Frontend)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Plataforma React.JS (componentes y props)
+- Paquete React-Router-Dom (BrowserRouter, Route, Routes, Navigate)
+- React Hooks (useState, useEffect)
+- Uso de dinámico de íconos MUI
+- Implementación de plataforma de pago Paypal modo Sandbox
+- Uso de React-Redux para store
+- Axios como cliente HTTP para comunicación con endpoint
+- Uso de Redux-persist al momento de persistir datos tales como carrito de compra
+- Almacenamiento de datos en Localstorage
+- Uso de datos almacenados en Mongodb para funciones tales como Login y Register
+- Modularización de componentes
+- Operaciones CRUD en carrito de compras
+- Media queries para versión móvil
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 5. Prototipado
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Prototipado](./src/images/simple-prototype.jpg)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 6. Autores
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Darío Ávila](https://github.com/darioavila2022)
+- [Paulina Cárcamo](https://github.com/PaulinaCarcamo)
