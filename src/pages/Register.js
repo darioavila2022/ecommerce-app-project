@@ -19,7 +19,7 @@ export default function Register() {
 
         const configuration = {
             method: "post",
-            url: "http://ecommerce-app-project-backend.vercel.app",
+            url: "https://ecommerce-app.up.railway.app/",
             data: {
                 email,
                 password,
