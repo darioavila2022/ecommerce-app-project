@@ -19,7 +19,7 @@ export default function Register() {
 
         const configuration = {
             method: "post",
-            url: "http://localhost:5000/api/auth/register",
+            url: "https://ecommerce.app.up.railway.app/api/auth/register",
             data: {
                 email,
                 password,
