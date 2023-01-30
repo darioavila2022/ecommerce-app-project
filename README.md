@@ -13,7 +13,7 @@ Proyecto creado con fines de aprendizaje: Este proyecto cuenta con dos component
 
 ## 1. Enlace frontend
 
-[Enlace front](https://fastidious-sorbet-509ab1.netlify.app/)
+[Enlace front](https://superb-sunburst-e0eb4e.netlify.app/)
 
 ## 2. Enlace backend
 
