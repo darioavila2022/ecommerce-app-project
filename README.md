@@ -4,18 +4,18 @@ Proyecto creado con fines de aprendizaje: Este proyecto cuenta con dos component
 
 ## *Índice*
 
-* [1. Enlace front](#1-enlacefront)
-* [2. Enlace back](#2-enlaceback)
+* [1. Enlace front](#1-enlace-frontend)
+* [2. Enlace back](#2-enlace-backend)
 * [3. Instalación](#3-instalación)
 * [4. Recursos utilizados](#4-recursos-utilizados)
 * [5. Prototipado](#5-prototipado)
 * [6. Autores](#6-autores)
 
-## 1. Enlace front-end
+## 1. Enlace frontend
 
 [Enlace front](https://fastidious-sorbet-509ab1.netlify.app/)
 
-## 2. Enlace back-end
+## 2. Enlace backend
 
 [Enlace back](https://github.com/darioavila2022/ecommerce-app-project-backend)
 
@@ -33,7 +33,7 @@ Inicialización en servidor local:
   npm start
 ```
 
-## 4. Recursos utilizados (Frontend)
+## 4. Recursos utilizados
 
 - Plataforma React.JS (componentes y props)
 - Paquete React-Router-Dom (BrowserRouter, Route, Routes, Navigate)
