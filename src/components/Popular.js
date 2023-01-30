@@ -13,7 +13,7 @@ const Popular = ({ prods, filters, sort }) => {
     useEffect(() => {
         const getProducts = async () => {
             try {
-                const res = await axios.get("https://ecommerce-app.up.railway.app/");
+                const res = await axios.get("https://ecommerce-app.up.railway.app/api/products");
                 setProducts(res.data);
             } catch (err) { }
         };
