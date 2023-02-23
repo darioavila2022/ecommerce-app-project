@@ -25,7 +25,7 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await publicRequest.get("https://ecommerce-app.up.railway.app/api/products/find/" + id);
+        const res = await publicRequest.get("https://ecommerce-app-project-backend-gaw0i63ak-darioavila2022.vercel.app/api/products/find/" + id);
         setProduct(res.data);
       } catch { }
     };
